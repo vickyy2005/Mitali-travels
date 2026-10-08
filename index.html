@@ -81,13 +81,15 @@
       backdrop-filter: blur(8px);
       padding: 7px 16px;
       border-radius: var(--radius-full);
+      white-space: nowrap;
     }
     .hero-title {
-      font-size: clamp(40px, 6.8vw, 96px);
+      font-size: clamp(32px, 6.5vw, 96px);
       color: #FFFFFF;
       max-width: 960px;
       line-height: 1.08;
       margin-bottom: 20px;
+      word-break: break-word;
     }
     .hero-title span.highlight {
       color: var(--gold);
@@ -118,6 +120,7 @@
       display: flex;
       flex-direction: column;
       gap: 4px;
+      min-width: 0;
     }
     .search-field label {
       font-family: var(--mono);
@@ -135,6 +138,7 @@
       color: var(--text);
       outline: none;
       cursor: pointer;
+      width: 100%;
     }
     @media (max-width: 992px) {
       .hero-search-card {
@@ -145,12 +149,67 @@
         grid-column: span 2;
       }
     }
+    @media (max-width: 768px) {
+      .hero {
+        min-height: auto;
+        padding-top: 104px;
+        padding-bottom: 44px;
+      }
+      .hero-badges {
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      .hero-badge {
+        font-size: 10.5px;
+        padding: 5px 12px;
+      }
+      .hero-title {
+        font-size: clamp(28px, 7vw, 44px);
+        line-height: 1.15;
+        margin-bottom: 14px;
+      }
+      .hero-sub {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 22px;
+      }
+      .hero-search-card {
+        padding: 18px 16px;
+        gap: 14px;
+        border-radius: var(--radius-lg);
+        margin-top: 12px;
+      }
+      .search-field select, .search-field input {
+        font-size: 13.5px;
+      }
+      .hero-search-card .btn {
+        padding: 13px 20px !important;
+        font-size: 14px !important;
+      }
+    }
     @media (max-width: 600px) {
       .hero-search-card {
         grid-template-columns: 1fr;
       }
       .hero-search-card .btn {
         grid-column: span 1;
+        width: 100%;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero {
+        padding-top: 94px;
+        padding-bottom: 34px;
+      }
+      .hero-badge:nth-child(n+3) {
+        display: none;
+      }
+      .hero-title {
+        font-size: 26px;
+        line-height: 1.18;
+      }
+      .hero-sub {
+        font-size: 14px;
       }
     }
 
@@ -186,9 +245,35 @@
       font-weight: 500;
     }
     @media (max-width: 768px) {
+      .why-section {
+        padding: 50px 0;
+      }
       .stats-strip {
         grid-template-columns: repeat(2, 1fr);
-        padding: 28px 20px;
+        padding: 24px 18px;
+        gap: 20px 16px;
+        border-radius: var(--radius-lg);
+      }
+      .stat-num {
+        font-size: 34px;
+      }
+      .stat-label {
+        font-size: 12.5px;
+      }
+    }
+    @media (max-width: 480px) {
+      .why-section {
+        padding: 36px 0;
+      }
+      .stats-strip {
+        gap: 16px 12px;
+        padding: 18px 14px;
+      }
+      .stat-num {
+        font-size: 28px;
+      }
+      .stat-label {
+        font-size: 11.5px;
       }
     }
 
@@ -239,6 +324,57 @@
       height: 28px;
       fill: #FFFFFF;
       margin-left: 4px;
+    }
+    .video-content-overlay {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      right: 30px;
+      z-index: 2;
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      .video-banner-box {
+        height: 320px;
+        margin: 30px 0;
+        border-radius: var(--radius-lg);
+      }
+      .play-video-btn {
+        width: 64px;
+        height: 64px;
+      }
+      .play-video-btn svg {
+        width: 22px;
+        height: 22px;
+      }
+      .video-content-overlay {
+        bottom: 18px !important;
+        left: 18px !important;
+        right: 18px !important;
+      }
+      .video-content-overlay h3 {
+        font-size: 20px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .video-banner-box {
+        height: 240px;
+        margin: 16px 0;
+      }
+      .play-video-btn {
+        width: 50px;
+        height: 50px;
+      }
+      .play-video-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+      .video-content-overlay h3 {
+        font-size: 16px !important;
+      }
+      .video-content-overlay p {
+        font-size: 11.5px !important;
+      }
     }
   </style>
 
@@ -439,9 +575,9 @@
   </section>
 
   <!-- ================= FEATURED DESTINATIONS ================= -->
-  <section style="padding: 100px 0; background: var(--bg-section);">
+  <section class="section-destinations" style="background: var(--bg-section);">
     <div class="container">
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 50px; flex-wrap: wrap; gap: 20px;">
+      <div class="section-header-row">
         <div class="section-head reveal" style="margin-bottom: 0;">
           <div class="eyebrow">Iconic Landscapes</div>
           <h2>Eight Journeys Worth Crossing The Country For</h2>
@@ -533,9 +669,9 @@
   </section>
 
   <!-- ================= POPULAR CURATED PACKAGES ================= -->
-  <section style="padding: 120px 0; background: var(--bg);">
+  <section class="section-packages" style="background: var(--bg);">
     <div class="container">
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 50px; flex-wrap: wrap; gap: 20px;">
+      <div class="section-header-row">
         <div class="section-head reveal" style="margin-bottom: 0;">
           <div class="eyebrow">Handcrafted Itineraries</div>
           <h2>Packages Built Around How You Like To Travel</h2>
@@ -657,14 +793,14 @@
   </section>
 
   <!-- ================= VIDEO SHOWCASE ================= -->
-  <section style="padding: 40px 0; background: var(--bg);">
+  <section class="section-video" style="background: var(--bg);">
     <div class="container">
       <div class="video-banner-box reveal">
         <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1600&q=80" alt="Scenic road trip along mountain passes">
         <div class="play-video-btn" onclick="alert('Playing WanderNest 4K Cinematic Journey Showcase...')" title="Play Cinematic Video">
           <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         </div>
-        <div style="position: absolute; bottom: 30px; left: 30px; z-index: 2; color: #fff;">
+        <div class="video-content-overlay" style="position: absolute; bottom: 30px; left: 30px; z-index: 2; color: #fff;">
           <div class="eyebrow light">CINEMATIC PREVIEW</div>
           <h3 style="font-size: 28px; color: #fff;">Across High Passes &amp; Palm Canopies</h3>
           <p style="font-size: 14px; color: rgba(255,255,255,0.85); font-family: var(--mono);">4K Travelogue · India Uncovered</p>
@@ -674,7 +810,7 @@
   </section>
 
   <!-- ================= EXPERIENCES & SIGNATURE WONDERS ================= -->
-  <section style="padding: 110px 0 60px; background: var(--bg-section);" id="experience">
+  <section class="section-experiences" style="background: var(--bg-section);" id="experience">
     <div class="container">
       <div class="section-head reveal">
         <div class="eyebrow">Signature Wanderlust</div>
@@ -851,38 +987,38 @@
       </div>
 
       <!-- The Five-Step Journey Arc -->
-      <div style="margin-top: 70px;">
+      <div class="journey-arc-wrap" style="margin-top: 60px;">
         <div class="section-head reveal">
           <div class="eyebrow">The WanderNest Standard</div>
           <h2>Five Moments, One Seamless Story</h2>
           <p>From your initial phone call to the moments you'll replay for years — here is how our private journeys unfold.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
-          <div class="exp-step reveal" style="min-width: 0;">
+        <div class="journey-arc-grid">
+          <div class="exp-step reveal">
             <span class="exp-index">01 / Curate</span>
-            <h3 style="font-size: 20px;">Discovery</h3>
-            <p style="font-size: 13.5px;">A relaxed consultation to capture your pace, style, and culinary wishes.</p>
+            <h3>Discovery</h3>
+            <p>A relaxed consultation to capture your pace, style, and culinary wishes.</p>
           </div>
-          <div class="exp-step reveal" style="min-width: 0;">
+          <div class="exp-step reveal">
             <span class="exp-index">02 / Reserve</span>
-            <h3 style="font-size: 20px;">Booking</h3>
-            <p style="font-size: 13.5px;">VIP stays, permits, and private transfers secured with transparent quotes.</p>
+            <h3>Booking</h3>
+            <p>VIP stays, permits, and private transfers secured with transparent quotes.</p>
           </div>
-          <div class="exp-step reveal" style="min-width: 0;">
+          <div class="exp-step reveal">
             <span class="exp-index">03 / Chaperone</span>
-            <h3 style="font-size: 20px;">Concierge</h3>
-            <p style="font-size: 13.5px;">A dedicated 24/7 specialist manages luggage, check-ins, and reservations.</p>
+            <h3>Concierge</h3>
+            <p>A dedicated 24/7 specialist manages luggage, check-ins, and reservations.</p>
           </div>
-          <div class="exp-step reveal" style="min-width: 0;">
+          <div class="exp-step reveal">
             <span class="exp-index">04 / Immerse</span>
-            <h3 style="font-size: 20px;">Detours</h3>
-            <p style="font-size: 13.5px;">Secret viewpoints, local home-cooked banquets, and hidden heritage trails.</p>
+            <h3>Detours</h3>
+            <p>Secret viewpoints, local home-cooked banquets, and hidden heritage trails.</p>
           </div>
-          <div class="exp-step reveal" style="min-width: 0;">
+          <div class="exp-step reveal">
             <span class="exp-index">05 / Cherish</span>
-            <h3 style="font-size: 20px;">Memories</h3>
-            <p style="font-size: 13.5px;">Curated photos, high-res keepsakes, and early-bird status for your next trip.</p>
+            <h3>Memories</h3>
+            <p>Curated photos, high-res keepsakes, and early-bird status for your next trip.</p>
           </div>
         </div>
       </div>
@@ -890,19 +1026,19 @@
   </section>
 
   <!-- ================= REVIEWS & TESTIMONIALS ================= -->
-  <section style="padding: 110px 0 120px; background: var(--bg);" id="reviews">
+  <section class="section-reviews" id="reviews" style="background: var(--bg);">
     <div class="container">
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 24px;">
+      <div class="section-header-row review-section-header">
         <div class="section-head reveal" style="margin-bottom: 0;">
           <div class="eyebrow">Verified Feedback</div>
           <h2>Loved By Discerning Travellers</h2>
           <p>Read authentic feedback from couples, families, and solo wanderers who travelled with us.</p>
         </div>
         
-        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <span style="font-family: var(--display); font-size: 38px; color: var(--ocean); font-weight: 600;">4.9★</span>
-            <span style="font-size: 13px; color: var(--text-soft); line-height: 1.3;">Over 10,000+ happy <br>travellers across India</span>
+        <div class="review-head-actions">
+          <div class="review-rating-snippet">
+            <span class="review-rating-score">4.9★</span>
+            <span class="review-rating-note">Over 10,000+ happy <br>travellers across India</span>
           </div>
           <button class="btn btn-sunset" id="writeReviewBtn">✍ Write A Review</button>
         </div>
@@ -1121,14 +1257,14 @@
   </div>
 
   <!-- ================= NEWSLETTER & CTA ================= -->
-  <section style="padding: 100px 0; background: linear-gradient(135deg, #0F172A 0%, #0369A1 100%); color: #fff;">
+  <section class="section-cta" style="background: linear-gradient(135deg, #0F172A 0%, #0369A1 100%); color: #fff;">
     <div class="container" style="text-align: center;">
       <div class="eyebrow light" style="justify-content: center;">Start Planning</div>
-      <h2 style="color: #fff; font-size: clamp(32px, 4.5vw, 56px); margin-bottom: 20px;">Ready For Your Next Journey?</h2>
-      <p style="color: rgba(255,255,255,0.85); font-size: 18px; max-width: 600px; margin: 0 auto 36px;">
+      <h2 style="color: #fff; font-size: clamp(26px, 4.5vw, 56px); margin-bottom: 20px;">Ready For Your Next Journey?</h2>
+      <p style="color: rgba(255,255,255,0.85); font-size: 17px; max-width: 600px; margin: 0 auto 32px;">
         Tell us where you want to wander. We'll design a customized itinerary within 24 hours — no obligations, just inspiration.
       </p>
-      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+      <div class="cta-buttons-wrap">
         <button class="btn btn-white open-booking-modal">Plan My Trip Now</button>
         <a href="contact.html" class="btn btn-ghost" style="color: #fff; border-color: rgba(255,255,255,0.4);">Speak To A Travel Designer</a>
       </div>
