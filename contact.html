@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact &amp; Plan My Trip | WanderNest Travels</title>
+  <meta name="description" content="Get in touch with WanderNest Travels. Custom itinerary planning, office locations in Goa, Delhi, and Bangalore, 24/7 travel concierge.">
+  
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230284C7'/%3E%3Cpath d='M20 55 L48 40 L80 50 L48 60 Z' fill='%23FDFDFC'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261008">
+  <style>
+    /* ==========================================================================
+       NEUMORPHISM / SOFT UI THEME FOR CONTACT & INQUIRY PAGE
+       ========================================================================== */
+    :root {
+      --neu-bg: #E0E5EC;
+      --neu-shadow-dark: #b8c1cc;
+      --neu-shadow-light: #ffffff;
+      --neu-text: #1E293B;
+      --neu-text-muted: #64748B;
+    }
+
+    body {
+      background-color: var(--neu-bg);
+    }
+
+    .contact-section-neu {
+      padding: 90px 0 130px;
+      background-color: var(--neu-bg) !important;
+      color: var(--neu-text);
+      position: relative;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 50px;
+      align-items: flex-start;
+    }
+
+    /* Elevated Neumorphic Inquiry Card */
+    .inquiry-card.neu-card,
+    .inquiry-card {
+      background: var(--neu-bg) !important;
+      border: 1px solid rgba(255, 255, 255, 0.8) !important;
+      border-radius: 32px !important;
+      padding: 44px !important;
+      box-shadow: 16px 16px 32px var(--neu-shadow-dark), -16px -16px 32px var(--neu-shadow-light) !important;
+      position: relative;
+    }
+
+    /* Neumorphic Eyebrow Pill */
+    .eyebrow.neu-pill,
+    .eyebrow-neu {
+      background: var(--neu-bg) !important;
+      box-shadow: 4px 4px 10px var(--neu-shadow-dark), -4px -4px 10px var(--neu-shadow-light) !important;
+      border: 1px solid rgba(255, 255, 255, 0.9) !important;
+      border-radius: 9999px !important;
+      padding: 6px 16px !important;
+      font-family: var(--mono) !important;
+      font-size: 11px !important;
+      letter-spacing: 0.12em !important;
+      text-transform: uppercase !important;
+      color: var(--ocean) !important;
+      font-weight: 700 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      margin-bottom: 16px !important;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-field.full {
+      grid-column: span 2;
+    }
+
+    .form-field label {
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      color: #334155 !important;
+      letter-spacing: 0.01em;
+    }
+
+    /* Deep Sunken / Debossed Neumorphic Inputs, Selects & Textarea */
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      padding: 14px 18px !important;
+      border: 1px solid rgba(255, 255, 255, 0.5) !important;
+      border-radius: 16px !important;
+      background: var(--neu-bg) !important;
+      color: #0F172A !important;
+      font-size: 14.5px !important;
+      font-family: var(--sans) !important;
+      outline: none !important;
+      box-shadow: inset 5px 5px 10px var(--neu-shadow-dark), inset -5px -5px 10px var(--neu-shadow-light) !important;
+      transition: all 0.25s ease !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: #94A3B8 !important;
+      font-size: 13.5px !important;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: rgba(2, 132, 199, 0.45) !important;
+      box-shadow: inset 6px 6px 12px #a8b5c4, inset -6px -6px 12px var(--neu-shadow-light), 0 0 0 2px rgba(2, 132, 199, 0.45) !important;
+    }
+
+    /* Primary Neumorphic Submit Button */
+    .btn-neu-submit {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      width: 100% !important;
+      padding: 16px 32px !important;
+      border-radius: 9999px !important;
+      background: linear-gradient(135deg, #029de8 0%, #0274b0 100%) !important;
+      color: #FFFFFF !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.02em !important;
+      border: none !important;
+      cursor: pointer !important;
+      box-shadow: 8px 8px 20px var(--neu-shadow-dark), -8px -8px 20px var(--neu-shadow-light) !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .btn-neu-submit:hover {
+      background: linear-gradient(135deg, #028fd4 0%, #026aa0 100%) !important;
+      box-shadow: 10px 10px 24px #a8b6c6, -10px -10px 24px var(--neu-shadow-light) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    .btn-neu-submit:active {
+      box-shadow: inset 4px 4px 8px #01507d, inset -4px -4px 8px #049fe9 !important;
+      transform: translateY(1px) !important;
+    }
+
+    /* Elevated Office Details Card */
+    .office-card-neu {
+      background: var(--neu-bg) !important;
+      border: 1px solid rgba(255, 255, 255, 0.8) !important;
+      border-radius: 30px !important;
+      padding: 32px !important;
+      box-shadow: 16px 16px 32px var(--neu-shadow-dark), -16px -16px 32px var(--neu-shadow-light) !important;
+      margin-bottom: 30px !important;
+    }
+
+    /* Neumorphic Icon Badges */
+    .neu-icon-badge {
+      width: 46px !important;
+      height: 46px !important;
+      border-radius: 50% !important;
+      background: var(--neu-bg) !important;
+      box-shadow: 5px 5px 12px var(--neu-shadow-dark), -5px -5px 12px var(--neu-shadow-light) !important;
+      border: 1px solid rgba(255, 255, 255, 0.9) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Neumorphic Action Buttons */
+    .btn-neu-action {
+      flex: 1 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      padding: 13px 18px !important;
+      border-radius: 9999px !important;
+      background: var(--neu-bg) !important;
+      font-size: 13.5px !important;
+      font-weight: 600 !important;
+      color: #1E293B !important;
+      box-shadow: 6px 6px 14px var(--neu-shadow-dark), -6px -6px 14px var(--neu-shadow-light) !important;
+      border: 1px solid rgba(255, 255, 255, 0.8) !important;
+      cursor: pointer !important;
+      transition: all 0.25s var(--ease) !important;
+      text-decoration: none !important;
+    }
+
+    .btn-neu-action:hover {
+      color: var(--ocean) !important;
+      box-shadow: 8px 8px 18px #a8b5c4, -8px -8px 18px var(--neu-shadow-light) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    .btn-neu-action:active {
+      box-shadow: inset 3px 3px 6px var(--neu-shadow-dark), inset -3px -3px 6px var(--neu-shadow-light) !important;
+      transform: translateY(1px) !important;
+    }
+
+    /* Sunken Map Frame */
+    .map-frame-neu {
+      background: var(--neu-bg) !important;
+      border-radius: 30px !important;
+      padding: 14px !important;
+      box-shadow: inset 8px 8px 18px var(--neu-shadow-dark), inset -8px -8px 18px var(--neu-shadow-light) !important;
+      border: 1px solid rgba(255, 255, 255, 0.6) !important;
+      height: 320px !important;
+      overflow: hidden !important;
+      box-sizing: border-box !important;
+    }
+
+    .map-frame-neu iframe {
+      width: 100% !important;
+      height: 100% !important;
+      border-radius: 20px !important;
+      border: none !important;
+    }
+
+    /* Neumorphic FAQ Accordion */
+    .faq-accordion-neu {
+      margin-top: 80px !important;
+    }
+
+    .faq-item-neu,
+    .faq-item {
+      background: var(--neu-bg) !important;
+      border-radius: 22px !important;
+      margin-bottom: 20px !important;
+      box-shadow: 8px 8px 20px var(--neu-shadow-dark), -8px -8px 20px var(--neu-shadow-light) !important;
+      border: 1px solid rgba(255, 255, 255, 0.8) !important;
+      overflow: hidden !important;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .faq-item-neu.active,
+    .faq-item.active {
+      box-shadow: inset 4px 4px 10px var(--neu-shadow-dark), inset -4px -4px 10px var(--neu-shadow-light) !important;
+    }
+
+    .faq-question-neu,
+    .faq-question {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 22px 28px !important;
+      text-align: left !important;
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      color: #0F172A !important;
+      cursor: pointer !important;
+      background: transparent !important;
+      border: none !important;
+    }
+
+    .faq-icon-neu,
+    .faq-icon {
+      width: 34px !important;
+      height: 34px !important;
+      border-radius: 50% !important;
+      background: var(--neu-bg) !important;
+      box-shadow: 4px 4px 8px var(--neu-shadow-dark), -4px -4px 8px var(--neu-shadow-light) !important;
+      border: 1px solid rgba(255, 255, 255, 0.9) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      color: var(--ocean) !important;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, color 0.35s ease !important;
+      flex-shrink: 0 !important;
+    }
+
+    .faq-item-neu.active .faq-icon-neu,
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg) !important;
+      box-shadow: inset 2px 2px 5px var(--neu-shadow-dark), inset -2px -2px 5px var(--neu-shadow-light) !important;
+      color: #EF4444 !important;
+    }
+
+    .faq-answer-neu,
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 28px;
+      transition: max-height 0.4s var(--ease), padding 0.4s ease;
+      color: #475569 !important;
+      font-size: 14.5px !important;
+      line-height: 1.7 !important;
+    }
+
+    .faq-item-neu.active .faq-answer-neu,
+    .faq-item.active .faq-answer {
+      max-height: 250px !important;
+      padding-bottom: 24px !important;
+    }
+
+    @media (max-width: 900px) {
+      .contact-container {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+      }
+      .inquiry-card.neu-card,
+      .inquiry-card {
+        padding: 30px 22px !important;
+      }
+      .office-card-neu {
+        padding: 26px 20px !important;
+      }
+      .form-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .form-field.full {
+        grid-column: span 1 !important;
+      }
+    }
+  </style>
+
+  <!-- Preloader Navigation Controller: Only runs on first session visit or reload -->
+  <script>
+    (function () {
+      try {
+        var isReload = false;
+        if (window.performance) {
+          var navEntries = performance.getEntriesByType && performance.getEntriesByType('navigation');
+          if (navEntries && navEntries.length > 0) {
+            isReload = (navEntries[0].type === 'reload');
+          } else if (performance.navigation) {
+            isReload = (performance.navigation.type === 1);
+          }
+        }
+        var hasVisited = sessionStorage.getItem('mitali_visited');
+        if (!isReload && hasVisited) {
+          document.documentElement.classList.add('skip-preloader');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==================== LUXURY LOGO PRELOADER ==================== -->
+  <div id="sitePreloader" aria-hidden="true">
+    <div class="preloader-bg-ambient"></div>
+    <div class="preloader-content">
+      <div class="preloader-visual">
+        <div class="preloader-pulse-ring"></div>
+        <div class="preloader-orbit">
+          <div class="preloader-orbit-plane">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="preloader-medallion">
+          <img src="images/mitali-logo.png" alt="Mitali Tours &amp; Travels Logo" class="preloader-logo-img">
+        </div>
+      </div>
+      <div class="preloader-brand-title">
+        <span class="preloader-name-main">Mitali</span>
+        <span class="preloader-name-sub">Tours &amp; Travels</span>
+      </div>
+      <p class="preloader-tagline">Crafting your bespoke journey...</p>
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-track">
+          <div class="preloader-bar-fill"></div>
+        </div>
+        <div class="preloader-meta">
+          <span>INITIALIZING</span>
+          <span class="preloader-counter">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="siteHeader">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Mitali Tours and Travels Home">
+        <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img">
+        <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+      </a>
+
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-primary open-booking-modal">Plan My Trip</button>
+
+        <button class="burger" id="burgerBtn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="wishlist.html">Saved Wishlist ❤️</a>
+    <div class="mobile-actions">
+      <button class="btn btn-primary open-booking-modal" style="width: 100%;">Plan My Trip</button>
+    </div>
+  </div>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1920&q=80" alt="Goa Calangute palms">
+    </div>
+    <div class="container page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Contact &amp; Custom Trip</span>
+      </div>
+      <div class="eyebrow light">Direct Concierge</div>
+      <h1>Let's Start With A Conversation</h1>
+      <p class="page-hero-desc">
+        Tell us where you dream of wandering. No automated call bots or endless tickets — you'll receive a thoughtful reply and tailored itinerary from a senior travel curator.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= MAIN CONTACT & INQUIRY SECTION (NEUMORPHISM) ================= -->
+  <section class="contact-section-neu">
+    <div class="container">
+      <div class="contact-container">
+        
+        <!-- Left: Interactive Custom Trip Inquiry Form (Neumorphic Card) -->
+        <div class="inquiry-card neu-card reveal">
+          <div class="eyebrow neu-pill">Trip Design Inquiry</div>
+          <h2 style="font-size: 28px; margin-bottom: 8px; color: #0F172A;">Design Your Bespoke Holiday</h2>
+          <p style="color: #64748B; font-size: 14.5px; margin-bottom: 28px; line-height: 1.6;">
+            Fill in your preferred travel dates and interests. We will email and WhatsApp you a customized day-by-day plan within 24 hours.
+          </p>
+
+          <form id="contactInquiryForm">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="ciName">Full Name *</label>
+                <input type="text" id="ciName" placeholder="e.g. Radhika Sen" required>
+              </div>
+
+              <div class="form-field">
+                <label for="ciEmail">Email Address *</label>
+                <input type="email" id="ciEmail" placeholder="radhika@example.com" required>
+              </div>
+
+              <div class="form-field">
+                <label for="ciPhone">WhatsApp / Mobile Number *</label>
+                <input type="tel" id="ciPhone" placeholder="+91 98765 43210" required>
+              </div>
+
+              <div class="form-field">
+                <label for="ciCity">Departure City *</label>
+                <input type="text" id="ciCity" placeholder="e.g. Mumbai, Delhi, London" required>
+              </div>
+
+              <div class="form-field">
+                <label for="ciDest">Destination of Interest *</label>
+                <select id="ciDest" required>
+                  <option value="Goa">Goa (Beaches &amp; Villas)</option>
+                  <option value="Kashmir" selected>Kashmir (Dal Lake &amp; Gulmarg)</option>
+                  <option value="Kerala">Kerala (Backwaters &amp; Munnar)</option>
+                  <option value="Ladakh">Ladakh (Pangong &amp; High Passes)</option>
+                  <option value="Andaman">Andaman (Coral Reefs &amp; Scuba)</option>
+                  <option value="Rajasthan">Rajasthan (Jaipur &amp; Udaipur Havelis)</option>
+                  <option value="Himachal">Himachal (Manali &amp; Solang)</option>
+                  <option value="Multi-Region">Multi-Region Custom Circuit</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="ciDate">Expected Travel Date *</label>
+                <input type="date" id="ciDate" required>
+              </div>
+
+              <div class="form-field">
+                <label for="ciAdults">Adults (12+ yrs)</label>
+                <select id="ciAdults">
+                  <option value="1">1 Traveler (Solo)</option>
+                  <option value="2" selected>2 Travelers (Couple)</option>
+                  <option value="3">3 Travelers</option>
+                  <option value="4">4 Travelers (Family)</option>
+                  <option value="6">6+ (Group / Corporate)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="ciBudget">Estimated Budget Per Person</label>
+                <select id="ciBudget">
+                  <option value="classic">₹25,000 - ₹45,000 (Boutique Heritage)</option>
+                  <option value="premium" selected>₹45,000 - ₹85,000 (Signature 5★)</option>
+                  <option value="ultra">₹85,000+ (Ultra-Exclusive Private Pool)</option>
+                </select>
+              </div>
+
+              <div class="form-field full">
+                <label for="ciNotes">Tell Us What Would Make This Trip Perfect</label>
+                <textarea id="ciNotes" rows="3" placeholder="Anniversary celebrations, private guides, dietary preferences, pace..."></textarea>
+              </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+              <button type="submit" class="btn-neu-submit">
+                Submit Inquiry &amp; Request Custom Itinerary &rarr;
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Office Details, Direct Connect & Map (Neumorphic Card) -->
+        <div class="reveal">
+          <div class="eyebrow neu-pill">Direct Contact</div>
+          <h2 style="font-size: 28px; margin-bottom: 8px; color: #0F172A;">Our Offices &amp; Concierge</h2>
+          <p style="color: #64748B; font-size: 14.5px; margin-bottom: 26px; line-height: 1.6;">
+            Visit our lounges for an unhurried consultation over authentic coffee, or reach our concierge directly.
+          </p>
+
+          <div class="office-card-neu">
+            <div style="display: flex; gap: 16px; margin-bottom: 22px;">
+              <div class="neu-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ocean)" stroke-width="2.2"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size: 15px; margin-bottom: 4px; color: #0F172A;">Goa Headquarters &amp; Flagship Lounge</h4>
+                <p style="font-size: 13.5px; color: #64748B; line-height: 1.5;">Calangute Beach Road, North Goa, Goa 403516, India</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 16px; margin-bottom: 22px;">
+              <div class="neu-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--sunset)" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size: 15px; margin-bottom: 4px; color: #0F172A;">Direct Concierge Line</h4>
+                <p style="font-size: 13.5px; color: #64748B;">+91 98765 43210 · (10:00 AM - 8:00 PM IST)</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 16px;">
+              <div class="neu-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="2.2"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size: 15px; margin-bottom: 4px; color: #0F172A;">Email Inquiries</h4>
+                <p style="font-size: 13.5px; color: #64748B;">hello@wandernest.in · concierge@wandernest.in</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px dashed rgba(148, 163, 184, 0.4); display: flex; gap: 12px;">
+              <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="btn-neu-action">
+                💬 WhatsApp Chat
+              </a>
+              <a href="tel:+919876543210" class="btn-neu-action">
+                📞 Call Directly
+              </a>
+            </div>
+          </div>
+
+          <!-- Embedded Map (Neumorphic Inset Frame) -->
+          <div class="map-frame-neu">
+            <iframe src="https://www.google.com/maps?q=Calangute+Beach,+North+Goa,+Goa,+India&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="WanderNest Travels office in Calangute Goa"></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FAQ Section (Neumorphic) -->
+      <div class="faq-accordion-neu reveal" id="faq">
+        <div class="section-head" style="text-align: center; max-width: 680px; margin: 0 auto 50px;">
+          <div class="eyebrow neu-pill">Got Questions?</div>
+          <h2 style="font-size: 34px; color: #0F172A; margin-bottom: 12px;">Frequently Asked Questions</h2>
+          <p style="color: #64748B; font-size: 15px;">Everything you need to know about planning your luxury holiday with WanderNest.</p>
+        </div>
+
+        <div class="faq-item-neu active">
+          <button class="faq-question-neu">
+            <span>What makes WanderNest different from regular tour operators?</span>
+            <span class="faq-icon-neu">+</span>
+          </button>
+          <div class="faq-answer-neu">
+            We exclusively design private, tailormade journeys. You travel in a private air-conditioned vehicle with your own chauffeur, stay at handpicked boutique hotels and heritage villas, and have a dedicated 24/7 concierge managing all reservations and dietary pacing throughout.
+          </div>
+        </div>
+
+        <div class="faq-item-neu">
+          <button class="faq-question-neu">
+            <span>Can I customize the day-by-day itinerary and pacing?</span>
+            <span class="faq-icon-neu">+</span>
+          </button>
+          <div class="faq-answer-neu">
+            Absolutely! Every itinerary on our website is merely an inspiration starting point. You can add extra days, upgrade to oceanfront pool villas, request private speedboats, or modify sightseeing to match your personal interests.
+          </div>
+        </div>
+
+        <div class="faq-item-neu">
+          <button class="faq-question-neu">
+            <span>Do you help with domestic flights and inner-line permits?</span>
+            <span class="faq-icon-neu">+</span>
+          </button>
+          <div class="faq-answer-neu">
+            Yes. We handle domestic flight ticketing, airport VIP lounges, and all necessary government tourism permits (such as Ladakh Pangong Tso inner line permits and Andaman forest permits) seamlessly.
+          </div>
+        </div>
+
+        <div class="faq-item-neu">
+          <button class="faq-question-neu">
+            <span>What is your cancellation and date change policy?</span>
+            <span class="faq-icon-neu">+</span>
+          </button>
+          <div class="faq-answer-neu">
+            We provide flexible date modifications up to 14 days before departure with zero WanderNest penalty fees. Cancellations made more than 21 days in advance receive a 90% refund minus non-refundable airfares.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Mitali Tours and Travels Home">
+            <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img footer-logo-img">
+            <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+          </a>
+          <p>Bespoke luxury holidays crafted by Mitali Tours & Travels — curating unforgettable journeys across the subcontinent and beyond since 2011.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="packages.html">Holiday Packages</a></li>
+            <li><a href="index.html#experience">Experiences</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="index.html#reviews">Traveller Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="wishlist.html">Saved Wishlist Trips</a></li>
+            <li><a href="contact.html">Contact &amp; Map</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 16px;">
+            Get seasonal travel notes and secret routes.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 WanderNest Travels LLP. All rights reserved.</span>
+        <span>Calangute Beach Road, North Goa · +91 98765 43210</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Form submission simulation
+    const form = document.getElementById('contactInquiryForm');
+    const dateInput = document.getElementById('ciDate');
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.min = tomorrow.toISOString().split('T')[0];
+    dateInput.value = tomorrow.toISOString().split('T')[0];
+
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('ciName').value;
+      const dest = document.getElementById('ciDest').value;
+      const ref = 'WN-INQ-' + Math.floor(1000 + Math.random() * 9000);
+
+      window.WanderNest?.showToast(`Inquiry #${ref} received! Our travel curator will contact you shortly.`, 'success');
+      form.reset();
+    });
+  </script>
+</body>
+</html>

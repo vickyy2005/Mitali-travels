@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Travel Photo Gallery | WanderNest Travels</title>
+  <meta name="description" content="View our curated photographic gallery of extraordinary journeys across Ladakh, Kashmir, Kerala backwaters, Goa beaches, and Rajasthan palaces.">
+  
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230284C7'/%3E%3Cpath d='M20 55 L48 40 L80 50 L48 60 Z' fill='%23FDFDFC'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Preloader Navigation Controller: Only runs on first session visit or reload -->
+  <script>
+    (function () {
+      try {
+        var isReload = false;
+        if (window.performance) {
+          var navEntries = performance.getEntriesByType && performance.getEntriesByType('navigation');
+          if (navEntries && navEntries.length > 0) {
+            isReload = (navEntries[0].type === 'reload');
+          } else if (performance.navigation) {
+            isReload = (performance.navigation.type === 1);
+          }
+        }
+        var hasVisited = sessionStorage.getItem('mitali_visited');
+        if (!isReload && hasVisited) {
+          document.documentElement.classList.add('skip-preloader');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==================== LUXURY LOGO PRELOADER ==================== -->
+  <div id="sitePreloader" aria-hidden="true">
+    <div class="preloader-bg-ambient"></div>
+    <div class="preloader-content">
+      <div class="preloader-visual">
+        <div class="preloader-pulse-ring"></div>
+        <div class="preloader-orbit">
+          <div class="preloader-orbit-plane">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="preloader-medallion">
+          <img src="images/mitali-logo.png" alt="Mitali Tours &amp; Travels Logo" class="preloader-logo-img">
+        </div>
+      </div>
+      <div class="preloader-brand-title">
+        <span class="preloader-name-main">Mitali</span>
+        <span class="preloader-name-sub">Tours &amp; Travels</span>
+      </div>
+      <p class="preloader-tagline">Crafting your bespoke journey...</p>
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-track">
+          <div class="preloader-bar-fill"></div>
+        </div>
+        <div class="preloader-meta">
+          <span>INITIALIZING</span>
+          <span class="preloader-counter">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="siteHeader">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Mitali Tours and Travels Home">
+        <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img">
+        <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+      </a>
+
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-primary open-booking-modal">Plan My Trip</button>
+
+        <button class="burger" id="burgerBtn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="wishlist.html">Saved Wishlist ❤️</a>
+    <div class="mobile-actions">
+      <button class="btn btn-primary open-booking-modal" style="width: 100%;">Plan My Trip</button>
+    </div>
+  </div>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1920&q=80" alt="Mountain alpine horizon in sunset light">
+    </div>
+    <div class="container page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Gallery</span>
+      </div>
+      <div class="eyebrow light">Photographic Archives</div>
+      <h1>In Full Frame</h1>
+      <p class="page-hero-desc">
+        Glimpses of stillness and wonder captured by our travellers and resident photographers across India's most extraordinary terrains.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY MASONRY ================= -->
+  <section style="padding: 80px 0 120px; background: var(--bg);">
+    <div class="container">
+      
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="filter-pills" id="galleryFilterPills">
+          <button class="filter-pill active" data-cat="all">All Photos</button>
+          <button class="filter-pill" data-cat="mountains">Himalayas &amp; Valleys</button>
+          <button class="filter-pill" data-cat="beaches">Coasts &amp; Islands</button>
+          <button class="filter-pill" data-cat="heritage">Palaces &amp; Culture</button>
+          <button class="filter-pill" data-cat="nature">Backwaters &amp; Lakes</button>
+        </div>
+        <div style="font-family: var(--mono); font-size: 12px; color: var(--text-soft);">
+          Click any photo to view full-resolution lightbox
+        </div>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="gallery-grid" id="galleryMasonry">
+        
+        <div class="gallery-item" data-cat="mountains" data-title="Pangong Tso Sunrise Glamping" data-sub="LADAKH · 14,270 FT" data-src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80" alt="Mountain range at sunrise in Ladakh">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">Pangong Tso Sunrise</div>
+            <div class="gallery-cap-sub">LADAKH · 14,270 FT</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="nature" data-title="Dal Lake Cedar Houseboat at Dawn" data-sub="SRINAGAR, KASHMIR" data-src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80" alt="Alpine lake reflecting mountains Kashmir">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">Dal Lake Morning Reflection</div>
+            <div class="gallery-cap-sub">SRINAGAR, KASHMIR</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="beaches" data-title="Radhanagar Beach White Sands" data-sub="HAVELOCK, ANDAMAN" data-src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80" alt="Aerial view of tropical island Andaman">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">Radhanagar Island Haven</div>
+            <div class="gallery-cap-sub">HAVELOCK, ANDAMAN</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="mountains" data-title="Solang Valley Pine Forest Trail" data-sub="MANALI, HIMACHAL" data-src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80" alt="Green valley mountains in Manali">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">Solang Valley Pine Mist</div>
+            <div class="gallery-cap-sub">MANALI, HIMACHAL</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="beaches" data-title="Vagator Cliff Golden Hour" data-sub="NORTH GOA" data-src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Golden sunset beach Goa">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">Vagator Golden Horizon</div>
+            <div class="gallery-cap-sub">NORTH GOA</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="heritage" data-title="City Palace &amp; Hawa Mahal" data-sub="JAIPUR, RAJASTHAN" data-src="https://static.vecteezy.com/system/resources/previews/003/153/081/non_2x/jaipur-city-palace-in-jaipur-city-free-photo.jpg">
+          <img src="https://static.vecteezy.com/system/resources/previews/003/153/081/non_2x/jaipur-city-palace-in-jaipur-city-free-photo.jpg" alt="Jaipur City Palace architecture">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">Jaipur Royal Architecture</div>
+            <div class="gallery-cap-sub">JAIPUR, RAJASTHAN</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="nature" data-title="Alleppey Canal Kettuvallam" data-sub="ALLEPPEY, KERALA" data-src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80" alt="Kerala backwaters houseboat cruise">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">Alleppey Emerald Canal</div>
+            <div class="gallery-cap-sub">ALLEPPEY, KERALA</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="nature" data-title="Rann of Kutch Salt Horizon" data-sub="KUTCH, GUJARAT" data-src="https://images.unsplash.com/photo-1587922546307-776227941871?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1587922546307-776227941871?auto=format&fit=crop&w=800&q=80" alt="White salt desert in Kutch">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">White Salt Horizon</div>
+            <div class="gallery-cap-sub">KUTCH, GUJARAT</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="nature" data-title="Coorg Misty Estate Hills" data-sub="MADIKERI, KARNATAKA" data-src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=80" alt="Coffee plantation resort hills in Coorg">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">Coffee Hills Mist</div>
+            <div class="gallery-cap-sub">MADIKERI, KARNATAKA</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="heritage" data-title="Lake Pichola Royal Palace" data-sub="UDAIPUR, RAJASTHAN" data-src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=800&q=80" alt="Udaipur Lake Palace">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">Lake Pichola Sunset</div>
+            <div class="gallery-cap-sub">UDAIPUR, RAJASTHAN</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="mountains" data-title="Spiti Valley High Monastery" data-sub="KEY GOMPA, SPITI" data-src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=800&q=80" alt="Golden hour over mountain lake Spiti">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">Key Gompa Monastery</div>
+            <div class="gallery-cap-sub">KEY GOMPA, SPITI</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="mountains" data-title="Himalayan Mountain Pass Cloud Bank" data-sub="ROHTANG, HIMACHAL" data-src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Mountain peaks over clouds">
+          <div class="gallery-overlay">
+            <div class="gallery-cap-title">Above The Clouds</div>
+            <div class="gallery-cap-sub">ROHTANG, HIMACHAL</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LIGHTBOX MODAL ================= -->
+  <div class="lightbox" id="galleryLightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous Photo">&#10094;</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next Photo">&#10095;</button>
+    
+    <div class="lightbox-content">
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="">
+      </div>
+      <div class="lightbox-caption">
+        <h3 id="lightboxTitle" style="color: #fff; font-size: 22px; margin-bottom: 4px;"></h3>
+        <p id="lightboxSub" style="color: var(--sky); font-family: var(--mono); font-size: 12px; margin-bottom: 14px;"></p>
+        <button class="btn btn-primary btn-sm open-booking-modal" id="lightboxBookBtn">Plan A Journey Here &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Mitali Tours and Travels Home">
+            <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img footer-logo-img">
+            <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+          </a>
+          <p>Bespoke luxury holidays crafted by Mitali Tours & Travels — curating unforgettable journeys across the subcontinent and beyond since 2011.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="packages.html">Holiday Packages</a></li>
+            <li><a href="index.html#experience">Experiences</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="index.html#reviews">Traveller Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="wishlist.html">Saved Wishlist Trips</a></li>
+            <li><a href="contact.html">Contact &amp; Map</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 16px;">
+            Get seasonal travel notes and secret routes.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 WanderNest Travels LLP. All rights reserved.</span>
+        <span>Calangute Beach Road, North Goa · +91 98765 43210</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Lightbox and Filtering Logic
+    const galleryItems = Array.from(document.querySelectorAll('#galleryMasonry .gallery-item'));
+    const filterPills = document.querySelectorAll('#galleryFilterPills .filter-pill');
+    const lightbox = document.getElementById('galleryLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxSub = document.getElementById('lightboxSub');
+
+    let currentIndex = 0;
+    let visibleItems = [...galleryItems];
+
+    function filterGallery(category) {
+      if (category === 'all') {
+        galleryItems.forEach(item => item.style.display = 'block');
+        visibleItems = [...galleryItems];
+      } else {
+        visibleItems = [];
+        galleryItems.forEach(item => {
+          if (item.getAttribute('data-cat') === category) {
+            item.style.display = 'block';
+            visibleItems.push(item);
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+    }
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        filterGallery(pill.getAttribute('data-cat'));
+      });
+    });
+
+    function showLightbox(index) {
+      if (!visibleItems.length) return;
+      currentIndex = (index + visibleItems.length) % visibleItems.length;
+      const item = visibleItems[currentIndex];
+
+      const src = item.getAttribute('data-src') || item.querySelector('img').src;
+      const title = item.getAttribute('data-title');
+      const sub = item.getAttribute('data-sub');
+
+      lightboxImg.src = src;
+      lightboxTitle.textContent = title;
+      lightboxSub.textContent = sub;
+      lightbox.classList.add('active');
+    }
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const idx = visibleItems.indexOf(item);
+        if (idx !== -1) showLightbox(idx);
+      });
+    });
+
+    document.getElementById('lightboxClose')?.addEventListener('click', () => lightbox.classList.remove('active'));
+    document.getElementById('lightboxPrev')?.addEventListener('click', () => showLightbox(currentIndex - 1));
+    document.getElementById('lightboxNext')?.addEventListener('click', () => showLightbox(currentIndex + 1));
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') lightbox.classList.remove('active');
+      if (e.key === 'ArrowLeft') showLightbox(currentIndex - 1);
+      if (e.key === 'ArrowRight') showLightbox(currentIndex + 1);
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) lightbox.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

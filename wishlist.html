@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Saved Trips &amp; Wishlist | WanderNest Travels</title>
+  <meta name="description" content="View and manage your saved luxury travel itineraries and holiday packages on WanderNest Travels.">
+  
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230284C7'/%3E%3Cpath d='M20 55 L48 40 L80 50 L48 60 Z' fill='%23FDFDFC'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Preloader Navigation Controller: Only runs on first session visit or reload -->
+  <script>
+    (function () {
+      try {
+        var isReload = false;
+        if (window.performance) {
+          var navEntries = performance.getEntriesByType && performance.getEntriesByType('navigation');
+          if (navEntries && navEntries.length > 0) {
+            isReload = (navEntries[0].type === 'reload');
+          } else if (performance.navigation) {
+            isReload = (performance.navigation.type === 1);
+          }
+        }
+        var hasVisited = sessionStorage.getItem('mitali_visited');
+        if (!isReload && hasVisited) {
+          document.documentElement.classList.add('skip-preloader');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==================== LUXURY LOGO PRELOADER ==================== -->
+  <div id="sitePreloader" aria-hidden="true">
+    <div class="preloader-bg-ambient"></div>
+    <div class="preloader-content">
+      <div class="preloader-visual">
+        <div class="preloader-pulse-ring"></div>
+        <div class="preloader-orbit">
+          <div class="preloader-orbit-plane">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="preloader-medallion">
+          <img src="images/mitali-logo.png" alt="Mitali Tours &amp; Travels Logo" class="preloader-logo-img">
+        </div>
+      </div>
+      <div class="preloader-brand-title">
+        <span class="preloader-name-main">Mitali</span>
+        <span class="preloader-name-sub">Tours &amp; Travels</span>
+      </div>
+      <p class="preloader-tagline">Crafting your bespoke journey...</p>
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-track">
+          <div class="preloader-bar-fill"></div>
+        </div>
+        <div class="preloader-meta">
+          <span>INITIALIZING</span>
+          <span class="preloader-counter">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="siteHeader">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Mitali Tours and Travels Home">
+        <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img">
+        <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+      </a>
+
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-primary open-booking-modal">Plan My Trip</button>
+
+        <button class="burger" id="burgerBtn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="wishlist.html" class="active">Saved Wishlist ❤️</a>
+    <div class="mobile-actions">
+      <button class="btn btn-primary open-booking-modal" style="width: 100%;">Plan My Trip</button>
+    </div>
+  </div>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Ocean coastline travel wishlist">
+    </div>
+    <div class="container page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>My Saved Trips</span>
+      </div>
+      <div class="eyebrow light">Dream Destinations</div>
+      <h1>Your Travel Wishlist</h1>
+      <p class="page-hero-desc">
+        All your favourite handpicked journeys in one place. Compare estimated budgets, refine dates, and book in a single click.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= WISHLIST CONTENT ================= -->
+  <section style="padding: 80px 0 120px; background: var(--bg);">
+    <div class="container">
+      
+      <!-- List container dynamically populated -->
+      <div id="wishlistContainer"></div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Mitali Tours and Travels Home">
+            <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img footer-logo-img">
+            <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+          </a>
+          <p>Bespoke luxury holidays crafted by Mitali Tours & Travels — curating unforgettable journeys across the subcontinent and beyond since 2011.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="packages.html">Holiday Packages</a></li>
+            <li><a href="index.html#experience">Experiences</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="index.html#reviews">Traveller Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="wishlist.html">Saved Wishlist Trips</a></li>
+            <li><a href="contact.html">Contact &amp; Map</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 16px;">
+            Get seasonal travel notes and secret routes.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 WanderNest Travels LLP. All rights reserved.</span>
+        <span>Calangute Beach Road, North Goa · +91 98765 43210</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Wishlist Page Renderer
+    window.renderWishlistPage = function() {
+      const container = document.getElementById('wishlistContainer');
+      const items = window.WanderNest?.getWishlist() || [];
+
+      if (!items.length) {
+        container.innerHTML = `
+          <div class="wishlist-empty-state">
+            <div class="wishlist-empty-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 style="font-size: 26px; margin-bottom: 8px;">Your Wishlist Is Currently Empty</h3>
+            <p style="color: var(--text-soft); font-size: 15px; max-width: 460px; margin: 0 auto 28px;">
+              You haven't saved any holiday packages yet. Browse our curated collection and tap the heart icon on any tour to save it for later.
+            </p>
+            <a href="packages.html" class="btn btn-primary">
+              Explore Curated Packages &rarr;
+            </a>
+          </div>
+        `;
+        return;
+      }
+
+      let totalInr = 0;
+      let cardsHtml = items.map(item => {
+        totalInr += item.inrPrice || 50000;
+        const formattedPrice = window.WanderNest ? window.WanderNest.formatPrice(item.inrPrice) : '₹' + item.inrPrice.toLocaleString();
+        return `
+          <div class="pkg-card" style="flex-direction: row; align-items: stretch; margin-bottom: 24px; min-height: 200px;" id="item-${item.id}">
+            <div style="width: 280px; position: relative; overflow: hidden; flex-shrink: 0;">
+              <img src="${item.img}" alt="${item.title}" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="pkg-tag">${item.tag}</span>
+            </div>
+            <div class="pkg-body" style="flex: 1; padding: 24px 32px; justify-content: center;">
+              <h3>${item.title}</h3>
+              <div class="pkg-meta" style="margin-bottom: 12px;">${item.meta}</div>
+              <div style="font-size: 13px; color: var(--mint); margin-bottom: 16px;">
+                ✓ 5-Star Boutique Stays &amp; Private Chauffeur Included
+              </div>
+              <div class="pkg-foot" style="margin-top: 0; padding-top: 14px;">
+                <div class="pkg-price">
+                  <span>Starting From</span>
+                  ${formattedPrice}
+                </div>
+                <div class="pkg-actions">
+                  <button class="btn btn-ghost btn-sm remove-wishlist-item" data-id="${item.id}" style="color: #EF4444; border-color: #FECACA;">
+                    Remove ✕
+                  </button>
+                  <button class="btn btn-primary btn-sm open-booking-modal" data-package-title="${item.title}">
+                    Book This Trip &rarr;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const totalFormatted = window.WanderNest ? window.WanderNest.formatPrice(totalInr) : '₹' + totalInr.toLocaleString();
+
+      container.innerHTML = `
+        <div style="margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center;">
+          <h2 style="font-size: 28px;">Saved Packages (${items.length})</h2>
+          <a href="packages.html" class="btn btn-ghost btn-sm">+ Add More Trips</a>
+        </div>
+        <div class="wishlist-items-list">
+          ${cardsHtml}
+        </div>
+        <div class="wishlist-summary-bar">
+          <div>
+            <div style="font-family: var(--mono); font-size: 11px; color: var(--text-soft); text-transform: uppercase;">Combined Estimated Budget</div>
+            <div style="font-family: var(--display); font-size: 32px; color: var(--ocean); font-weight: 600;">${totalFormatted}</div>
+          </div>
+          <div style="display: flex; gap: 12px;">
+            <button class="btn btn-sunset open-booking-modal" data-package-title="Multiple Wishlist Tour Combination">
+              Consult Concierge On All Saved Trips &rarr;
+            </button>
+          </div>
+        </div>
+      `;
+
+      // Attach remove handlers
+      document.querySelectorAll('.remove-wishlist-item').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = btn.getAttribute('data-id');
+          window.WanderNest?.toggleWishlistItem({ id, title: 'Item' });
+          renderWishlistPage();
+        });
+      });
+
+      // Hook up newly created modal triggers
+      document.querySelectorAll('.open-booking-modal').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const pkgTitle = btn.getAttribute('data-package-title');
+          window.WanderNest?.openBookingModal(null, pkgTitle);
+        });
+      });
+    };
+
+    renderWishlistPage();
+  </script>
+</body>
+</html>

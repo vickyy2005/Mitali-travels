@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>About WanderNest Travels | 15 Years of Bespoke Journeys</title>
+  <meta name="description" content="Discover WanderNest Travels story, our slow travel philosophy, sustainability pledge, and the senior curators designing luxury journeys across India.">
+  
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230284C7'/%3E%3Cpath d='M20 55 L48 40 L80 50 L48 60 Z' fill='%23FDFDFC'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Preloader Navigation Controller: Only runs on first session visit or reload -->
+  <script>
+    (function () {
+      try {
+        var isReload = false;
+        if (window.performance) {
+          var navEntries = performance.getEntriesByType && performance.getEntriesByType('navigation');
+          if (navEntries && navEntries.length > 0) {
+            isReload = (navEntries[0].type === 'reload');
+          } else if (performance.navigation) {
+            isReload = (performance.navigation.type === 1);
+          }
+        }
+        var hasVisited = sessionStorage.getItem('mitali_visited');
+        if (!isReload && hasVisited) {
+          document.documentElement.classList.add('skip-preloader');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==================== LUXURY LOGO PRELOADER ==================== -->
+  <div id="sitePreloader" aria-hidden="true">
+    <div class="preloader-bg-ambient"></div>
+    <div class="preloader-content">
+      <div class="preloader-visual">
+        <div class="preloader-pulse-ring"></div>
+        <div class="preloader-orbit">
+          <div class="preloader-orbit-plane">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="preloader-medallion">
+          <img src="images/mitali-logo.png" alt="Mitali Tours &amp; Travels Logo" class="preloader-logo-img">
+        </div>
+      </div>
+      <div class="preloader-brand-title">
+        <span class="preloader-name-main">Mitali</span>
+        <span class="preloader-name-sub">Tours &amp; Travels</span>
+      </div>
+      <p class="preloader-tagline">Crafting your bespoke journey...</p>
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-track">
+          <div class="preloader-bar-fill"></div>
+        </div>
+        <div class="preloader-meta">
+          <span>INITIALIZING</span>
+          <span class="preloader-counter">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="siteHeader">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Mitali Tours and Travels Home">
+        <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img">
+        <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+      </a>
+
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-primary open-booking-modal">Plan My Trip</button>
+
+        <button class="burger" id="burgerBtn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="wishlist.html">Saved Wishlist ❤️</a>
+    <div class="mobile-actions">
+      <button class="btn btn-primary open-booking-modal" style="width: 100%;">Plan My Trip</button>
+    </div>
+  </div>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Goa coastline sunset">
+    </div>
+    <div class="container page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>About WanderNest</span>
+      </div>
+      <div class="eyebrow light">Our Origin</div>
+      <h1>Fifteen Years Of Slow, Thoughtful Travel</h1>
+      <p class="page-hero-desc">
+        Founded on the sun-drenched shores of North Goa in 2011, WanderNest was born from a simple conviction: holidays should be felt deeply, not rushed through.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= OUR STORY ================= -->
+  <section style="padding: 120px 0 80px; background: var(--bg);">
+    <div class="container">
+      <div class="story-grid">
+        <div class="reveal">
+          <div class="eyebrow">How We Began</div>
+          <h2>Bespoke Journeys, Handcrafted With Soul</h2>
+          <p style="color: var(--text-soft); font-size: 16.5px; line-height: 1.8; margin-bottom: 20px;">
+            In 2011, we were exhausted by commercial tour buses packing 45 travelers onto rushed schedules. We believed that true luxury lies in privacy, silence, authentic regional flavors, and the unhurried liberty to linger wherever your heart pauses.
+          </p>
+          <p style="color: var(--text-soft); font-size: 16.5px; line-height: 1.8; margin-bottom: 28px;">
+            Over fifteen years, our team of dedicated regional specialists has forged personal friendships with heritage palace owners in Rajasthan, Shikara captains on Dal Lake, and plantation masters in Coorg. We craft every itinerary like an author crafts a novel.
+          </p>
+          <div style="display: flex; gap: 32px; border-top: 1px solid var(--border); padding-top: 24px;">
+            <div>
+              <div style="font-family: var(--display); font-size: 32px; color: var(--ocean); font-weight: 600;">10,000+</div>
+              <div style="font-size: 13px; color: var(--text-soft);">Private journeys curated</div>
+            </div>
+            <div>
+              <div style="font-family: var(--display); font-size: 32px; color: var(--sunset); font-weight: 600;">98.4%</div>
+              <div style="font-size: 13px; color: var(--text-soft);">Repeat &amp; referral travelers</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-img-wrap reveal">
+          <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80" alt="Goa palm beach coastline">
+          <div class="story-badge-floating">
+            <div class="story-badge-num">15</div>
+            <div class="story-badge-text">
+              Years of Luxury <br>
+              Travel Heritage
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OUR VALUES ================= -->
+  <section style="padding: 100px 0; background: var(--bg-section);">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Our Philosophy</div>
+        <h2>The WanderNest Principles</h2>
+        <p>Four bedrock values that guide every route, hotel partnership, and private experience we curate.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+        <div class="review-card reveal" style="padding: 32px;">
+          <div style="font-family: var(--mono); font-size: 12px; color: var(--ocean); font-weight: 700; margin-bottom: 12px;">01 / SLOW LUXURY</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Unrushed Pacing</h3>
+          <p style="font-size: 14px; color: var(--text-soft); line-height: 1.6;">No waking up at 5 AM to catch commercial group transfers. Your day unfolds around your natural circadian rhythm.</p>
+        </div>
+
+        <div class="review-card reveal" style="padding: 32px;">
+          <div style="font-family: var(--mono); font-size: 12px; color: var(--sunset); font-weight: 700; margin-bottom: 12px;">02 / PRIVACY</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Private Chaperones</h3>
+          <p style="font-size: 14px; color: var(--text-soft); line-height: 1.6;">Private air-conditioned SUVs, dedicated chauffeurs, and hand-selected local historians at every archaeological site.</p>
+        </div>
+
+        <div class="review-card reveal" style="padding: 32px;">
+          <div style="font-family: var(--mono); font-size: 12px; color: var(--mint); font-weight: 700; margin-bottom: 12px;">03 / SUSTAINABILITY</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Community Pledge</h3>
+          <p style="font-size: 14px; color: var(--text-soft); line-height: 1.6;">We work exclusively with boutique indigenous stays and fair-wage village artisans, leaving zero carbon footprints behind.</p>
+        </div>
+
+        <div class="review-card reveal" style="padding: 32px;">
+          <div style="font-family: var(--mono); font-size: 12px; color: var(--gold-dark); font-weight: 700; margin-bottom: 12px;">04 / ASSURANCE</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">24/7 Concierge</h3>
+          <p style="font-size: 14px; color: var(--text-soft); line-height: 1.6;">Direct WhatsApp access to your trip specialist around the clock — ensuring instant medical, luggage, or itinerary flexibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MEET THE CURATORS ================= -->
+  <section style="padding: 120px 0; background: var(--bg);" id="team">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">The Architects of Your Trip</div>
+        <h2>Meet Our Senior Travel Curators</h2>
+        <p>Passionate explorers who spend six months of the year on the road vetting villas, routes, and experiences firsthand.</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Team 1 -->
+        <div class="team-card reveal">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Maya DSouza travel curator">
+          </div>
+          <div class="team-body">
+            <h3>Maya D'Souza</h3>
+            <div class="team-role">FOUNDER &amp; HEAD CURATOR</div>
+            <p class="team-desc">Born in Goa, Maya has spent 15 years crafting idyllic coastal escapes and island catamaran charters.</p>
+          </div>
+        </div>
+
+        <!-- Team 2 -->
+        <div class="team-card reveal">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Tenzing Norbu mountain specialist">
+          </div>
+          <div class="team-body">
+            <h3>Tenzing Norbu</h3>
+            <div class="team-role">HIMALAYAN TRAIL DIRECTOR</div>
+            <p class="team-desc">Ladakh native with 12+ high-altitude expeditions, mountaineering certification, and deep local Buddhist monastic ties.</p>
+          </div>
+        </div>
+
+        <!-- Team 3 -->
+        <div class="team-card reveal">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Arjun Pillai south specialist">
+          </div>
+          <div class="team-body">
+            <h3>Arjun Pillai</h3>
+            <div class="team-role">BACKWATERS &amp; WILDLIFE CURATOR</div>
+            <p class="team-desc">Naturalist and culinary enthusiast specializing in private Alleppey Kettuvallams and Periyar elephant trails.</p>
+          </div>
+        </div>
+
+        <!-- Team 4 -->
+        <div class="team-card reveal">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Rohini Rathore royal heritage specialist">
+          </div>
+          <div class="team-body">
+            <h3>Rohini Rathore</h3>
+            <div class="team-role">ROYAL RAJASTHAN SPECIALIST</div>
+            <p class="team-desc">Historian with an encyclopedic knowledge of Mewar fortresses, haveli restorations, and regal palace dinners.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACCREDITATIONS & AWARDS ================= -->
+  <section style="padding: 80px 0 100px; background: #0F172A; color: #fff;">
+    <div class="container" style="text-align: center;">
+      <div class="eyebrow light" style="justify-content: center;">Global Recognition</div>
+      <h2 style="color: #fff; margin-bottom: 40px;">Accredited &amp; Award-Winning Excellence</h2>
+
+      <div style="display: flex; justify-content: center; align-items: center; gap: 48px; flex-wrap: wrap;">
+        <div style="background: rgba(255,255,255,0.06); padding: 24px 32px; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.15);">
+          <div style="font-family: var(--display); font-size: 20px; color: var(--sky); margin-bottom: 4px;">Ministry of Tourism</div>
+          <div style="font-size: 12px; color: rgba(255,255,255,0.6); font-family: var(--mono);">Govt. of India Recognized</div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.06); padding: 24px 32px; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.15);">
+          <div style="font-family: var(--display); font-size: 20px; color: var(--gold); margin-bottom: 4px;">IATA Accredited</div>
+          <div style="font-size: 12px; color: rgba(255,255,255,0.6); font-family: var(--mono);">Global Passenger Safety Standard</div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.06); padding: 24px 32px; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.15);">
+          <div style="font-family: var(--display); font-size: 20px; color: var(--mint); margin-bottom: 4px;">Luxury Travel Awards 2025</div>
+          <div style="font-size: 12px; color: rgba(255,255,255,0.6); font-family: var(--mono);">Boutique Agency of the Year</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Mitali Tours and Travels Home">
+            <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img footer-logo-img">
+            <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+          </a>
+          <p>Bespoke luxury holidays crafted by Mitali Tours & Travels — curating unforgettable journeys across the subcontinent and beyond since 2011.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="packages.html">Holiday Packages</a></li>
+            <li><a href="index.html#experience">Experiences</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="index.html#reviews">Traveller Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="wishlist.html">Saved Wishlist Trips</a></li>
+            <li><a href="contact.html">Contact &amp; Map</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 16px;">
+            Get seasonal travel notes and secret routes.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 WanderNest Travels LLP. All rights reserved.</span>
+        <span>Calangute Beach Road, North Goa · +91 98765 43210</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

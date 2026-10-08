@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>WanderNest Travels | Luxury Holidays Across India &amp; Beyond</title>
+<meta name="description" content="WanderNest Travels crafts bespoke luxury holidays across Goa, Kashmir, Kerala, Ladakh and beyond. Handcrafted itineraries, private journeys, unforgettable memories.">
+<meta name="keywords" content="luxury travel agency India, Goa travel agency, honeymoon packages India, Kashmir tour packages, Kerala backwaters, Ladakh trips, luxury holidays India">
+<meta name="author" content="WanderNest Travels">
+<link rel="canonical" href="https://www.wandernest.in/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="WanderNest Travels | Explore Beyond Every Horizon">
+<meta property="og:description" content="Luxury holidays crafted for unforgettable experiences across India and beyond.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:url" content="https://www.wandernest.in/">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="WanderNest Travels">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WanderNest Travels | Explore Beyond Every Horizon">
+<meta name="twitter:description" content="Luxury holidays crafted for unforgettable experiences across India and beyond.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230284C7'/%3E%3Cpath d='M20 55 L48 40 L80 50 L48 60 Z' fill='%23FDFDFC'/%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "WanderNest Travels",
+  "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+  "telephone": "+91-98765-43210",
+  "email": "hello@wandernest.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calangute Beach Road",
+    "addressLocality": "North Goa",
+    "addressRegion": "Goa",
+    "postalCode": "403516",
+    "addressCountry": "IN"
+  },
+  "priceRange": "₹₹₹",
+  "areaServed": "IN"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================= */
+/* TOKENS */
+/* ============================= */
+:root{
+  --bg:#FDFDFC;
+  --bg-section:#F7FAFC;
+  --card:#FFFFFF;
+  --ocean:#0284C7;
+  --sky:#38BDF8;
+  --sunset:#F97316;
+  --gold:#FACC15;
+  --mint:#22C55E;
+  --text:#1E293B;
+  --text-soft:#64748B;
+  --border:#E2E8F0;
+
+  --display: 'Fraunces', serif;
+  --body: 'Inter', sans-serif;
+  --mono: 'Space Mono', monospace;
+
+  --ease: cubic-bezier(.16,.84,.28,1);
+  --ease-soft: cubic-bezier(.22,.61,.36,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;border:none;background:none;cursor:pointer;}
+ul{list-style:none;}
+section{position:relative;}
+
+::selection{background:var(--gold);color:var(--text);}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important;}
+}
+
+:focus-visible{
+  outline:2px solid var(--ocean);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+.container{
+  width:100%;
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 40px;
+}
+@media (max-width:768px){ .container{padding:0 24px;} }
+
+.eyebrow{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ocean);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:18px;
+}
+.eyebrow::before{
+  content:'';
+  width:26px;
+  height:1px;
+  background:var(--ocean);
+  display:inline-block;
+}
+
+h1,h2,h3{
+  font-family:var(--display);
+  font-weight:500;
+  letter-spacing:-0.01em;
+  line-height:1.05;
+}
+
+.section-head{
+  max-width:640px;
+  margin-bottom:64px;
+}
+.section-head h2{
+  font-size:clamp(32px,4.6vw,54px);
+  color:var(--text);
+}
+.section-head p{
+  margin-top:18px;
+  color:var(--text-soft);
+  font-size:17px;
+  line-height:1.7;
+  max-width:520px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:16px 30px;
+  border-radius:100px;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.01em;
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease), background .4s ease, color .4s ease;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:var(--ocean);
+  color:#fff;
+  box-shadow:0 8px 24px -8px rgba(2,132,199,.5);
+}
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 16px 32px -10px rgba(2,132,199,.55);
+}
+.btn-ghost{
+  background:transparent;
+  color:var(--text);
+  border:1px solid var(--border);
+}
+.btn-ghost:hover{
+  border-color:var(--ocean);
+  color:var(--ocean);
+  transform:translateY(-3px);
+}
+.btn svg{transition:transform .4s var(--ease);}
+.btn:hover svg{transform:translate(3px,-3px);}
+
+/* ============================= */
+/* PRELOADER */
+/* ============================= */
+html.skip-preloader #preloader { display: none !important; }
+#preloader{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:var(--bg);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition:opacity 1s var(--ease), visibility 1s var(--ease);
+}
+#preloader.done{opacity:0;visibility:hidden;pointer-events:none;}
+
+.pre-globe{
+  position:relative;
+  width:120px;
+  height:120px;
+  margin-bottom:36px;
+}
+.pre-globe svg{width:100%;height:100%;}
+.globe-ring{
+  fill:none;
+  stroke:var(--border);
+  stroke-width:1;
+}
+.globe-line{
+  fill:none;
+  stroke:var(--sky);
+  stroke-width:1;
+  opacity:.6;
+}
+.pre-plane{
+  position:absolute;
+  top:50%;left:50%;
+  width:20px;height:20px;
+  transform-origin:center;
+  animation:orbit 3.2s linear infinite;
+}
+@keyframes orbit{
+  from{transform:translate(-50%,-50%) rotate(0deg) translateX(66px) rotate(90deg);}
+  to{transform:translate(-50%,-50%) rotate(360deg) translateX(66px) rotate(90deg);}
+}
+.pre-logo{
+  font-family:var(--display);
+  font-size:22px;
+  letter-spacing:.02em;
+  color:var(--text);
+  margin-bottom:16px;
+  opacity:0;
+  animation:fadeUp 1s var(--ease) .3s forwards;
+}
+.pre-percent{
+  font-family:var(--mono);
+  font-size:13px;
+  color:var(--text-soft);
+  letter-spacing:.08em;
+}
+.pre-bar{
+  width:200px;
+  height:1px;
+  background:var(--border);
+  margin-top:18px;
+  position:relative;
+  overflow:hidden;
+}
+.pre-bar-fill{
+  position:absolute;
+  left:0;top:0;
+  height:100%;
+  width:0%;
+  background:var(--ocean);
+  transition:width .2s linear;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+
+/* ============================= */
+/* NAVBAR (Highlighted Glassmorphism) */
+/* ============================= */
+header#siteHeader {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 1220px;
+  z-index: 1000;
+  padding: 10px 24px;
+  background: rgba(15, 23, 42, 0.48);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 9999px;
+  box-shadow: 0 14px 40px -8px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.16) inset, 0 1px 2px 0 rgba(255, 255, 255, 0.35) inset;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+header#siteHeader .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 4px;
+  max-width: 100%;
+}
+header#siteHeader.scrolled {
+  top: 12px;
+  padding: 8px 24px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 20px 48px -8px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.18) inset;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  letter-spacing: 0.015em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.logo-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  white-space: nowrap;
+  letter-spacing: 0.015em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.25);
+}
+.logo-text span {
+  font-family: var(--display);
+  font-size: 17.5px;
+  font-weight: 600;
+  color: #38BDF8 !important;
+  text-shadow: 0 0 14px rgba(56, 189, 248, 0.75), 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.site-logo-img {
+  height: 42px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 1.5px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.45));
+  transition: transform 0.35s var(--ease), filter 0.35s ease;
+}
+.logo:hover .site-logo-img {
+  transform: scale(1.05) translateY(-1px);
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 1)) drop-shadow(0 0 14px rgba(56, 189, 248, 0.85));
+}
+.footer-logo-img {
+  height: 52px;
+  max-width: 165px;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.45));
+}
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0284C7 0%, #38BDF8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.55), 0 2px 8px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.logo:hover .logo-mark {
+  transform: rotate(15deg) scale(1.08);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.85), 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+.logo-mark svg {
+  width: 18px;
+  height: 18px;
+  stroke: #FFFFFF;
+  fill: none;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+}
+nav.links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+nav.links a {
+  position: relative;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #FFFFFF !important;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  letter-spacing: 0.015em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+  transition: all 0.25s var(--ease);
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+nav.links a::after {
+  display: none;
+}
+nav.links a:hover {
+  color: #38BDF8 !important;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+  transform: translateY(-1px);
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.7);
+}
+nav.links a.active {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.9) 0%, rgba(14, 165, 233, 0.95) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 2px 14px rgba(2, 132, 199, 0.65), 0 0 18px rgba(56, 189, 248, 0.45) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+}
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav-cta .btn-primary {
+  padding: 9px 22px;
+  font-size: 13.5px;
+  font-weight: 700;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #0284C7 0%, #0EA5E9 100%);
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 18px rgba(2, 132, 199, 0.5), 0 0 14px rgba(56, 189, 248, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+}
+.nav-cta .btn-primary:hover {
+  background: linear-gradient(135deg, #0369A1 0%, #0284C7 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(2, 132, 199, 0.75), 0 0 22px rgba(56, 189, 248, 0.6);
+}
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 28px;
+  padding: 4px 0;
+  background: none;
+  cursor: pointer;
+}
+.burger span {
+  height: 2px;
+  background: #FFFFFF !important;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s var(--ease);
+}
+
+.mobile-menu{
+  position:fixed;
+  inset:0;
+  background:var(--bg);
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+  transform:translateY(-100%);
+  transition:transform .6s var(--ease);
+}
+.mobile-menu.open{transform:translateY(0);}
+.mobile-menu a{font-family:var(--display);font-size:30px;}
+
+@media (max-width:900px){
+  nav.links, .nav-cta .btn-primary{display:none;}
+  .burger{display:flex;}
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:flex-end;
+  position:relative;
+  overflow:hidden;
+  padding-top:120px;
+  padding-bottom:80px;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+.hero-bg img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transform:scale(1.12);
+  animation:heroZoom 16s var(--ease-soft) forwards;
+}
+@keyframes heroZoom{to{transform:scale(1);}}
+.hero-bg::after{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(253,253,252,.05) 0%, rgba(2,10,20,.05) 40%, rgba(2,10,20,.55) 100%);
+}
+.hero-cloud{
+  position:absolute;
+  opacity:.85;
+  pointer-events:none;
+  filter:blur(.3px);
+}
+.hero-bird{
+  position:absolute;
+  animation:birdFloat linear infinite;
+  opacity:.85;
+}
+@keyframes birdFloat{
+  from{transform:translateX(-10vw) translateY(0);}
+  to{transform:translateX(110vw) translateY(-40px);}
+}
+.hero-content{
+  position:relative;
+  z-index:3;
+  width:100%;
+}
+.hero-badges{
+  display:flex;
+  gap:14px;
+  margin-bottom:26px;
+  flex-wrap:wrap;
+}
+.hero-badge{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.08em;
+  color:#fff;
+  background:rgba(253,253,252,.14);
+  border:1px solid rgba(255,255,255,.35);
+  backdrop-filter:blur(10px);
+  padding:8px 16px;
+  border-radius:100px;
+  opacity:0;
+  transform:translateY(14px);
+  animation:fadeUp .9s var(--ease) forwards;
+}
+.hero-badge:nth-child(2){animation-delay:.15s;}
+.hero-badge:nth-child(3){animation-delay:.3s;}
+
+.hero-title{
+  font-size:clamp(44px,7.4vw,110px);
+  color:#fff;
+  max-width:960px;
+  overflow:hidden;
+}
+.hero-title .line{
+  display:block;
+  overflow:hidden;
+  padding-bottom:.05em;
+}
+.hero-title .line span{
+  display:block;
+  transform:translateY(110%);
+  animation:lineReveal 1.1s var(--ease) forwards;
+}
+.hero-title .line:nth-child(1) span{animation-delay:.25s;}
+.hero-title .line:nth-child(2) span{animation-delay:.4s;color:var(--gold);}
+@keyframes lineReveal{to{transform:translateY(0);}}
+
+.hero-sub{
+  margin-top:28px;
+  max-width:460px;
+  color:rgba(255,255,255,.86);
+  font-size:17px;
+  line-height:1.7;
+  opacity:0;
+  animation:fadeUp 1s var(--ease) .8s forwards;
+}
+.hero-actions{
+  display:flex;
+  gap:16px;
+  margin-top:40px;
+  flex-wrap:wrap;
+  opacity:0;
+  animation:fadeUp 1s var(--ease) 1s forwards;
+}
+.hero-actions .btn-ghost{
+  color:#fff;
+  border-color:rgba(255,255,255,.4);
+}
+.hero-actions .btn-ghost:hover{border-color:#fff;}
+
+.scroll-indicator{
+  position:absolute;
+  bottom:36px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.14em;
+  opacity:0;
+  animation:fadeUp 1s var(--ease) 1.3s forwards;
+}
+.scroll-line{
+  width:1px;height:44px;
+  background:rgba(255,255,255,.4);
+  position:relative;
+  overflow:hidden;
+}
+.scroll-line::after{
+  content:'';
+  position:absolute;
+  top:-100%;left:0;width:100%;height:100%;
+  background:#fff;
+  animation:scrollDrip 2s ease-in-out infinite;
+}
+@keyframes scrollDrip{50%{top:100%;}100%{top:100%;}}
+
+/* ============================= */
+/* REVEAL UTILITY */
+/* ============================= */
+.reveal{
+  opacity:0;
+  transform:translateY(50px);
+  transition:opacity 1s var(--ease), transform 1s var(--ease);
+}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+.reveal-stagger .reveal:nth-child(1){transition-delay:0s;}
+.reveal-stagger .reveal:nth-child(2){transition-delay:.1s;}
+.reveal-stagger .reveal:nth-child(3){transition-delay:.2s;}
+.reveal-stagger .reveal:nth-child(4){transition-delay:.3s;}
+.reveal-stagger .reveal:nth-child(5){transition-delay:.4s;}
+.reveal-stagger .reveal:nth-child(6){transition-delay:.5s;}
+.reveal-stagger .reveal:nth-child(7){transition-delay:.6s;}
+.reveal-stagger .reveal:nth-child(8){transition-delay:.7s;}
+
+/* ============================= */
+/* DESTINATIONS */
+/* ============================= */
+.destinations{
+  padding:150px 0;
+  background:var(--bg);
+}
+.dest-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+.dest-card{
+  position:relative;
+  height:420px;
+  border-radius:18px;
+  overflow:hidden;
+  cursor:pointer;
+}
+.dest-card:nth-child(4n+1){grid-row:span 2; height:auto;}
+.dest-card img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform 1.2s var(--ease-soft);
+}
+.dest-card:hover img{transform:scale(1.1);}
+.dest-card::before{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(2,10,20,0) 40%, rgba(2,10,20,.75) 100%);
+  z-index:1;
+}
+.dest-card::after{
+  content:'';
+  position:absolute;
+  inset:10px;
+  border:1px solid rgba(255,255,255,0);
+  border-radius:14px;
+  z-index:2;
+  transition:border-color .5s var(--ease), inset .5s var(--ease);
+  pointer-events:none;
+}
+.dest-card:hover::after{border-color:rgba(255,255,255,.5);inset:16px;}
+.dest-info{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  z-index:2;
+  padding:26px;
+  color:#fff;
+}
+.dest-num{
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--gold);
+  letter-spacing:.1em;
+  display:block;
+  margin-bottom:6px;
+}
+.dest-info h3{
+  font-size:26px;
+  font-weight:500;
+}
+.dest-info p{
+  font-size:13px;
+  color:rgba(255,255,255,.75);
+  margin-top:4px;
+}
+
+@media (max-width:1024px){
+  .dest-grid{grid-template-columns:repeat(2,1fr);}
+  .dest-card:nth-child(4n+1){grid-row:span 1; height:420px;}
+}
+@media (max-width:600px){
+  .dest-grid{grid-template-columns:1fr;}
+}
+
+/* ============================= */
+/* PACKAGES */
+/* ============================= */
+.packages{
+  padding:150px 0;
+  background:var(--bg-section);
+}
+.pkg-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+.pkg-card{
+  background:var(--card);
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  transition:transform .6s var(--ease), box-shadow .6s var(--ease);
+  position:relative;
+}
+.pkg-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 50px -20px rgba(30,41,59,.18);
+}
+.pkg-img{
+  height:230px;
+  overflow:hidden;
+  position:relative;
+}
+.pkg-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 1s var(--ease-soft);
+}
+.pkg-card:hover .pkg-img img{transform:scale(1.08);}
+.pkg-tag{
+  position:absolute;
+  top:16px;left:16px;
+  background:rgba(253,253,252,.9);
+  backdrop-filter:blur(6px);
+  padding:6px 14px;
+  border-radius:100px;
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ocean);
+}
+.pkg-body{
+  padding:26px 26px 28px;
+  position:relative;
+}
+.pkg-body h3{font-size:21px;margin-bottom:8px;}
+.pkg-meta{
+  display:flex;
+  gap:16px;
+  font-size:12px;
+  color:var(--text-soft);
+  font-family:var(--mono);
+  margin-bottom:16px;
+}
+.pkg-foot{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-top:1px dashed var(--border);
+  padding-top:16px;
+  margin-top:6px;
+}
+.pkg-price{
+  font-family:var(--display);
+  font-size:22px;
+  color:var(--text);
+}
+.pkg-price span{
+  font-family:var(--body);
+  font-size:12px;
+  color:var(--text-soft);
+  display:block;
+  font-weight:400;
+}
+.pkg-arrow{
+  width:42px;height:42px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .4s var(--ease);
+}
+.pkg-card:hover .pkg-arrow{
+  background:var(--ocean);
+  border-color:var(--ocean);
+}
+.pkg-arrow svg{transition:all .4s var(--ease);}
+.pkg-card:hover .pkg-arrow svg{stroke:#fff;transform:rotate(45deg);}
+
+/* punch holes ticket motif */
+.pkg-body::before, .pkg-body::after{
+  content:'';
+  position:absolute;
+  top:calc(230px - 8px);
+  width:16px;height:16px;
+  background:var(--bg-section);
+  border-radius:50%;
+}
+.pkg-body::before{left:-8px;}
+.pkg-body::after{right:-8px;}
+
+@media (max-width:1024px){ .pkg-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:640px){ .pkg-grid{grid-template-columns:1fr;} }
+
+/* ============================= */
+/* WHY CHOOSE US */
+/* ============================= */
+.why{
+  padding:130px 0;
+  background:var(--bg);
+}
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:20px;
+  overflow:hidden;
+}
+.why-item{
+  background:var(--card);
+  padding:48px 32px;
+  text-align:left;
+  transition:background .5s var(--ease);
+}
+.why-item:hover{background:var(--bg-section);}
+.why-num{
+  font-family:var(--display);
+  font-size:52px;
+  color:var(--ocean);
+  display:block;
+  margin-bottom:10px;
+}
+.why-item:nth-child(2) .why-num{color:var(--sunset);}
+.why-item:nth-child(3) .why-num{color:var(--mint);}
+.why-item:nth-child(4) .why-num{color:var(--gold);}
+.why-label{
+  font-size:14px;
+  color:var(--text-soft);
+}
+@media (max-width:768px){ .why-grid{grid-template-columns:repeat(2,1fr);} }
+
+/* ============================= */
+/* TRAVEL EXPERIENCE - horizontal storytelling */
+/* ============================= */
+.experience{
+  padding:150px 0 60px;
+  background:var(--bg-section);
+  overflow:hidden;
+}
+.exp-track{
+  display:flex;
+  gap:24px;
+  overflow-x:auto;
+  scroll-snap-type:x proximity;
+  padding-bottom:30px;
+  scrollbar-width:none;
+}
+.exp-track::-webkit-scrollbar{display:none;}
+.exp-step{
+  scroll-snap-align:start;
+  min-width:320px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:40px 32px;
+  flex-shrink:0;
+  transition:transform .5s var(--ease);
+}
+.exp-step:hover{transform:translateY(-8px);}
+.exp-step .exp-index{
+  font-family:var(--mono);
+  color:var(--text-soft);
+  font-size:12px;
+  margin-bottom:24px;
+  display:block;
+}
+.exp-step h3{
+  font-size:24px;
+  margin-bottom:12px;
+}
+.exp-step p{
+  color:var(--text-soft);
+  font-size:14px;
+  line-height:1.7;
+}
+.exp-progress{
+  height:2px;
+  background:var(--border);
+  margin-top:10px;
+  position:relative;
+  max-width:1280px;
+  margin-left:auto;margin-right:auto;
+}
+.exp-progress-fill{
+  position:absolute;left:0;top:0;height:100%;
+  background:var(--ocean);
+  width:0%;
+  transition:width .1s linear;
+}
+
+/* ============================= */
+/* GALLERY */
+/* ============================= */
+.gallery{
+  padding:150px 0;
+  background:var(--bg);
+}
+.gallery-grid{
+  columns:4;
+  column-gap:18px;
+}
+@media (max-width:1024px){ .gallery-grid{columns:2;} }
+@media (max-width:600px){ .gallery-grid{columns:1;} }
+.gallery-item{
+  break-inside:avoid;
+  margin-bottom:18px;
+  position:relative;
+  border-radius:16px;
+  overflow:hidden;
+  cursor:pointer;
+}
+.gallery-item img{
+  width:100%;
+  display:block;
+  transition:transform 1s var(--ease-soft);
+}
+.gallery-item:hover img{transform:scale(1.08) rotate(.3deg);}
+.gallery-cap{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  padding:20px;
+  background:linear-gradient(180deg, transparent, rgba(2,10,20,.75));
+  color:#fff;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.06em;
+  opacity:0;
+  transform:translateY(10px);
+  transition:all .5s var(--ease);
+}
+.gallery-item:hover .gallery-cap{opacity:1;transform:translateY(0);}
+
+/* ============================= */
+/* VIDEO */
+/* ============================= */
+.video-section{
+  padding:0 0 150px;
+  background:var(--bg);
+}
+.video-frame{
+  position:relative;
+  height:70vh;
+  min-height:420px;
+  border-radius:24px;
+  overflow:hidden;
+}
+.video-frame img{
+  width:100%;height:100%;object-fit:cover;
+}
+.video-frame::after{
+  content:'';
+  position:absolute;inset:0;
+  background:rgba(2,10,20,.25);
+}
+.play-btn{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:96px;height:96px;
+  border-radius:50%;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.5);
+  backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:center;
+  z-index:2;
+  transition:transform .5s var(--ease), background .5s var(--ease);
+}
+.play-btn:hover{transform:translate(-50%,-50%) scale(1.1); background:rgba(255,255,255,.28);}
+.play-btn svg{width:26px;height:26px;fill:#fff;margin-left:4px;}
+.video-caption{
+  position:absolute;
+  bottom:30px;left:30px;
+  color:#fff;
+  z-index:2;
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.08em;
+}
+
+/* ============================= */
+/* TESTIMONIALS */
+/* ============================= */
+.testimonials{
+  padding:150px 0;
+  background:var(--bg-section);
+}
+.test-track-wrap{
+  overflow:hidden;
+}
+.test-track{
+  display:flex;
+  gap:24px;
+  transition:transform .8s var(--ease);
+}
+.test-card{
+  min-width:calc(33.333% - 16px);
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:36px;
+  flex-shrink:0;
+}
+.test-stars{
+  color:var(--gold);
+  font-size:14px;
+  margin-bottom:18px;
+  letter-spacing:2px;
+}
+.test-card p.quote{
+  font-family:var(--display);
+  font-size:19px;
+  line-height:1.6;
+  color:var(--text);
+  margin-bottom:28px;
+}
+.test-person{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.test-avatar{
+  width:48px;height:48px;
+  border-radius:50%;
+  background:var(--ocean);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);
+  font-size:16px;
+  overflow:hidden;
+  border:2px solid rgba(2, 132, 199, 0.25);
+  flex-shrink:0;
+}
+.test-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
+.test-name{font-weight:600;font-size:14px;}
+.test-loc{font-size:12px;color:var(--text-soft);}
+.test-dots{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  margin-top:44px;
+}
+.test-dot{
+  width:8px;height:8px;
+  border-radius:50%;
+  background:var(--border);
+  cursor:pointer;
+  transition:all .4s var(--ease);
+}
+.test-dot.active{background:var(--ocean); width:24px; border-radius:8px;}
+@media (max-width:1024px){ .test-card{min-width:calc(50% - 12px);} }
+@media (max-width:640px){ .test-card{min-width:100%;} }
+
+/* ============================= */
+/* CONTACT */
+/* ============================= */
+.contact{
+  padding:150px 0;
+  background:var(--bg);
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+.contact-info h2{
+  font-size:clamp(32px,4.6vw,50px);
+  margin-bottom:24px;
+}
+.contact-info p{color:var(--text-soft);line-height:1.7;margin-bottom:40px;max-width:420px;}
+.contact-item{
+  display:flex;
+  gap:18px;
+  padding:22px 0;
+  border-top:1px solid var(--border);
+}
+.contact-item:last-of-type{border-bottom:1px solid var(--border);}
+.contact-icon{
+  width:44px;height:44px;
+  border-radius:50%;
+  background:var(--bg-section);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.contact-icon svg{width:18px;height:18px;stroke:var(--ocean);}
+.contact-label{font-size:12px;color:var(--text-soft);margin-bottom:4px;font-family:var(--mono);letter-spacing:.05em;}
+.contact-value{font-size:15px;font-weight:500;}
+.map-frame{
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  height:100%;
+  min-height:440px;
+}
+.map-frame iframe{width:100%;height:100%;border:0;filter:grayscale(15%) contrast(1.02);}
+
+@media (max-width:900px){
+  .contact-grid{grid-template-columns:1fr;}
+  .map-frame{min-height:340px;}
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+footer {
+  position: relative;
+  background-color: #070B14;
+  background-image: 
+    linear-gradient(180deg, rgba(11, 17, 32, 0.88) 0%, rgba(15, 23, 42, 0.76) 45%, rgba(7, 11, 20, 0.94) 100%),
+    url('images/footer-travel-bg.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 100px 0 35px;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.7) 35%, rgba(2, 132, 199, 0.8) 65%, transparent);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
+  pointer-events: none;
+}
+.footer-top{
+  position: relative;
+  z-index: 2;
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1.2fr;
+  gap:50px;
+  padding-bottom:70px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.footer-brand .logo{color:#fff !important; font-size:23px; font-weight:700;}
+.footer-brand .logo span{color:#38BDF8 !important;}
+.footer-brand p{
+  color:rgba(255,255,255,.78);
+  font-size:14px;
+  line-height:1.7;
+  margin-top:20px;
+  max-width:280px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+.footer-col h4{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#38BDF8;
+  margin-bottom:22px;
+  font-weight: 700;
+}
+.footer-col ul li{margin-bottom:14px;}
+.footer-col ul li a{
+  color:rgba(255,255,255,.88);
+  font-size:14px;
+  transition:color .3s ease, padding-left .3s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.footer-col ul li a:hover{color:var(--sky); padding-left:4px;}
+.newsletter-form{
+  display:flex;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+  padding: 6px 6px 6px 18px;
+  margin-top: 20px;
+}
+.newsletter-form input{
+  background:transparent;
+  border:none;
+  color:#fff;
+  font-size:14px;
+  flex:1;
+  outline:none;
+}
+.newsletter-form input::placeholder{color:rgba(255,255,255,.55);}
+.newsletter-form button{
+  background: linear-gradient(135deg, #0284C7, #0EA5E9);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+}
+.social-row{
+  display:flex;
+  gap:14px;
+  margin-top:28px;
+}
+.social-row a{
+  width:40px;height:40px;
+  border-radius:50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .4s var(--ease);
+}
+.social-row a:hover{background:var(--ocean);border-color:var(--ocean);transform:translateY(-4px);}
+.social-row svg{width:16px;height:16px;stroke:#fff;}
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-top:30px;
+  font-size:13px;
+  color:rgba(255,255,255,.45);
+  flex-wrap:wrap;
+  gap:10px;
+}
+@media (max-width:900px){
+  .footer-top{grid-template-columns:1fr 1fr; gap:40px;}
+}
+@media (max-width:560px){
+  .footer-top{grid-template-columns:1fr;}
+}
+
+/* fade-in image helper */
+.img-mask{
+  position:relative;
+  overflow:hidden;
+}
+.img-mask img{
+  transform:scale(1.15);
+  opacity:0;
+  transition:transform 1.4s var(--ease-soft), opacity 1s ease;
+}
+.img-mask.in-view img{transform:scale(1);opacity:1;}
+</style>
+
+  <!-- Preloader Navigation Controller: Only runs on first session visit or reload -->
+  <script>
+    (function () {
+      try {
+        var isReload = false;
+        if (window.performance) {
+          var navEntries = performance.getEntriesByType && performance.getEntriesByType('navigation');
+          if (navEntries && navEntries.length > 0) {
+            isReload = (navEntries[0].type === 'reload');
+          } else if (performance.navigation) {
+            isReload = (performance.navigation.type === 1);
+          }
+        }
+        var hasVisited = sessionStorage.getItem('mitali_visited');
+        if (!isReload && hasVisited) {
+          document.documentElement.classList.add('skip-preloader');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div id="preloader">
+  <div class="pre-globe">
+    <svg viewBox="0 0 140 140">
+      <circle class="globe-ring" cx="70" cy="70" r="66"></circle>
+      <ellipse class="globe-line" cx="70" cy="70" rx="66" ry="26"></ellipse>
+      <ellipse class="globe-line" cx="70" cy="70" rx="66" ry="52"></ellipse>
+      <line class="globe-line" x1="4" y1="70" x2="136" y2="70"></line>
+    </svg>
+    <div class="pre-plane">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.6">
+        <path d="M2 16l7-2 5 5 2-1-3-6 6-4-1-2-7 2-5-4-2 1 3 5-6 3z"/>
+      </svg>
+    </div>
+  </div>
+  <div class="pre-logo">WanderNest Travels</div>
+  <div class="pre-percent" id="preloadPercent">Loading 0%</div>
+  <div class="pre-bar"><div class="pre-bar-fill" id="preloadBar"></div></div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<header id="siteHeader">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="Mitali Tours and Travels Home">
+      <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img">
+      <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+    </a>
+
+    <nav class="links">
+      <a href="index.html" class="active">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <button class="btn btn-primary open-booking-modal">Plan My Trip</button>
+
+      <button class="burger" id="burgerBtn" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Home</a>
+  <a href="#destinations">Destinations</a>
+  <a href="#packages">Packages</a>
+  <a href="#experience">Experiences</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80" alt="Turquoise beach coastline in Goa at golden hour">
+  </div>
+
+  <svg class="hero-cloud" style="top:14%;left:8%;width:140px;opacity:.5" viewBox="0 0 200 80"><ellipse cx="60" cy="50" rx="55" ry="22" fill="#fff"/><ellipse cx="110" cy="40" rx="45" ry="26" fill="#fff"/></svg>
+  <svg class="hero-cloud" style="top:8%;right:12%;width:100px;opacity:.4" viewBox="0 0 200 80"><ellipse cx="60" cy="50" rx="55" ry="22" fill="#fff"/><ellipse cx="110" cy="40" rx="45" ry="26" fill="#fff"/></svg>
+
+  <svg class="hero-bird" style="top:20%;animation-duration:26s;" width="26" viewBox="0 0 24 12" fill="none" stroke="#fff" stroke-width="1.4"><path d="M1 6 Q6 0 12 6 Q18 0 23 6"/></svg>
+  <div class="container hero-content">
+    <div class="hero-badges">
+      <span class="hero-badge">GOI ✈ IXL</span>
+      <span class="hero-badge">15+ Years Curating Journeys</span>
+      <span class="hero-badge">Est. Goa, India</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="line"><span>Discover The World's</span></span>
+      <span class="line"><span>Most Beautiful Destinations</span></span>
+    </h1>
+    <p class="hero-sub">Luxury holidays crafted for unforgettable experiences across India and beyond.</p>
+    <div class="hero-actions">
+      <a href="#destinations" class="btn btn-primary">
+        Explore Tours
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-ghost">
+        Plan My Trip
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    SCROLL
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ================= DESTINATIONS ================= -->
+<section class="destinations" id="destinations">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Where to next</div>
+      <h2>Eight journeys worth crossing the country for</h2>
+      <p>From backwater sunsets to Himalayan silence — every destination is chosen for the feeling it leaves behind, not just the photograph.</p>
+    </div>
+
+    <div class="dest-grid reveal-stagger">
+      <div class="dest-card reveal">
+        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80" alt="Palm-lined beach in Goa">
+        <div class="dest-info"><span class="dest-num">01 — Goa</span><h3>Goa</h3><p>Sunlit shores &amp; Portuguese lanes</p></div>
+      </div>
+      <div class="dest-card reveal">
+        <img src="https://www.worldatlas.com/upload/70/33/ab/shutterstock-115227475.jpg" alt="Snow capped mountains of Kashmir">
+        <div class="dest-info"><span class="dest-num">02 — Kashmir</span><h3>Kashmir</h3><p>Alpine lakes &amp; houseboats</p></div>
+      </div>
+      <div class="dest-card reveal">
+        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=700&q=80" alt="Snowy valley in Manali">
+        <div class="dest-info"><span class="dest-num">03 — Manali</span><h3>Manali</h3><p>Pine valleys &amp; mountain air</p></div>
+      </div>
+      <div class="dest-card reveal">
+        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=700&q=80" alt="Kerala backwaters houseboat">
+        <div class="dest-info"><span class="dest-num">04 — Kerala</span><h3>Kerala</h3><p>Emerald backwaters &amp; spice hills</p></div>
+      </div>
+      <div class="dest-card reveal">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="High altitude desert of Ladakh">
+        <div class="dest-info"><span class="dest-num">05 — Ladakh</span><h3>Ladakh</h3><p>High desert &amp; endless skies</p></div>
+      </div>
+      <div class="dest-card reveal">
+        <img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=700&q=80" alt="Andaman islands turquoise water">
+        <div class="dest-info"><span class="dest-num">06 — Andaman</span><h3>Andaman</h3><p>Coral reefs &amp; island silence</p></div>
+      </div>
+      <div class="dest-card reveal">
+        <img src="https://static.vecteezy.com/system/resources/previews/003/153/081/non_2x/jaipur-city-palace-in-jaipur-city-free-photo.jpg" alt="Pink city architecture of Jaipur">
+        <div class="dest-info"><span class="dest-num">07 — Jaipur</span><h3>Jaipur</h3><p>Forts, bazaars &amp; royal heritage</p></div>
+      </div>
+      <div class="dest-card reveal">
+        <img src="https://images.unsplash.com/photo-1587922546307-776227941871?auto=format&fit=crop&w=700&q=80" alt="White salt desert Rann of Kutch">
+        <div class="dest-info"><span class="dest-num">08 — Kutch</span><h3>Rann of Kutch</h3><p>White salt horizons at moonrise</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PACKAGES ================= -->
+<section class="packages" id="packages">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Curated itineraries</div>
+      <h2>Packages built around how you like to travel</h2>
+      <p>Every itinerary is a starting point — private guides, stays and pacing are tailored once you tell us what matters most.</p>
+    </div>
+
+    <div class="pkg-grid reveal-stagger">
+      <div class="pkg-card reveal">
+        <div class="pkg-img"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=80" alt="Couple watching sunset on honeymoon in Goa"><span class="pkg-tag">Honeymoon</span></div>
+        <div class="pkg-body">
+          <h3>Goa Honeymoon Escape</h3>
+          <div class="pkg-meta"><span>5N / 6D</span><span>·</span><span>Goa</span></div>
+          <div class="pkg-foot">
+            <div class="pkg-price">₹64,900<span>per couple</span></div>
+            <div class="pkg-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-card reveal">
+        <div class="pkg-img"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=700&q=80" alt="Family enjoying Kerala houseboat holiday"><span class="pkg-tag">Family</span></div>
+        <div class="pkg-body">
+          <h3>Kerala Family Retreat</h3>
+          <div class="pkg-meta"><span>6N / 7D</span><span>·</span><span>Kerala</span></div>
+          <div class="pkg-foot">
+            <div class="pkg-price">₹58,500<span>per family of 4</span></div>
+            <div class="pkg-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-card reveal">
+        <div class="pkg-img"><img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=700&q=80" alt="Trekker hiking in Ladakh mountains"><span class="pkg-tag">Adventure</span></div>
+        <div class="pkg-body">
+          <h3>Ladakh Adventure Trail</h3>
+          <div class="pkg-meta"><span>7N / 8D</span><span>·</span><span>Ladakh</span></div>
+          <div class="pkg-foot">
+            <div class="pkg-price">₹49,900<span>per person</span></div>
+            <div class="pkg-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-card reveal">
+        <div class="pkg-img"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=700&q=80" alt="Solo traveler backpacking in the mountains"><span class="pkg-tag">Solo</span></div>
+        <div class="pkg-body">
+          <h3>Himachal Solo Backpacking</h3>
+          <div class="pkg-meta"><span>4N / 5D</span><span>·</span><span>Manali</span></div>
+          <div class="pkg-foot">
+            <div class="pkg-price">₹22,400<span>per person</span></div>
+            <div class="pkg-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-card reveal">
+        <div class="pkg-img"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=700&q=80" alt="Resort conference venue for corporate offsite"><span class="pkg-tag">Corporate</span></div>
+        <div class="pkg-body">
+          <h3>Goa Corporate Offsite</h3>
+          <div class="pkg-meta"><span>3N / 4D</span><span>·</span><span>Goa</span></div>
+          <div class="pkg-foot">
+            <div class="pkg-price">₹38,000<span>per person</span></div>
+            <div class="pkg-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-card reveal">
+        <div class="pkg-img"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=700&q=80" alt="Weekend getaway hillside resort"><span class="pkg-tag">Weekend</span></div>
+        <div class="pkg-body">
+          <h3>Coorg Weekend Getaway</h3>
+          <div class="pkg-meta"><span>2N / 3D</span><span>·</span><span>Coorg</span></div>
+          <div class="pkg-foot">
+            <div class="pkg-price">₹16,900<span>per person</span></div>
+            <div class="pkg-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why WanderNest</div>
+      <h2>Numbers that took fifteen years to earn</h2>
+    </div>
+    <div class="why-grid reveal-stagger">
+      <div class="why-item reveal"><span class="why-num" data-count="15" data-suffix="+">0</span><div class="why-label">Years of curating journeys</div></div>
+      <div class="why-item reveal"><span class="why-num" data-count="10000" data-suffix="+">0</span><div class="why-label">Happy travellers &amp; counting</div></div>
+      <div class="why-item reveal"><span class="why-num" data-count="200" data-suffix="+">0</span><div class="why-label">Destinations covered</div></div>
+      <div class="why-item reveal"><span class="why-num" data-count="4.9" data-suffix="★" data-decimal="1">0</span><div class="why-label">Average traveller rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">The journey, mapped</div>
+      <h2>Five moments, one seamless story</h2>
+      <p>Scroll sideways to follow the arc of a WanderNest trip — from the first phone call to the memory you'll keep replaying.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="exp-track" id="expTrack">
+      <div class="exp-step"><span class="exp-index">01 / Planning</span><h3>Planning</h3><p>A single call to understand your pace, your budget and the version of a holiday you're actually craving.</p></div>
+      <div class="exp-step"><span class="exp-index">02 / Booking</span><h3>Booking</h3><p>Flights, stays and permits handled end to end, with a private itinerary document you can edit anytime.</p></div>
+      <div class="exp-step"><span class="exp-index">03 / Journey</span><h3>Journey</h3><p>A local expert on call at every leg — so the only thing you have to plan each day is what to feel like.</p></div>
+      <div class="exp-step"><span class="exp-index">04 / Adventure</span><h3>Adventure</h3><p>The detours worth taking — a hidden viewpoint, a home-cooked meal, a market that isn't on any list.</p></div>
+      <div class="exp-step"><span class="exp-index">05 / Memories</span><h3>Memories</h3><p>A trip that ends but doesn't fade — curated photos, notes and a reason to already plan the next one.</p></div>
+    </div>
+    <div class="exp-progress"><div class="exp-progress-fill" id="expFill"></div></div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">In frame</div>
+      <h2>Moments our travellers brought home</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item img-mask"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=700&q=80" alt="Mountain range at sunrise"><div class="gallery-cap">LADAKH · SUNRISE</div></div>
+      <div class="gallery-item img-mask"><img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=700&q=80" alt="Alpine lake reflecting mountains"><div class="gallery-cap">KASHMIR · DAL LAKE</div></div>
+      <div class="gallery-item img-mask"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=700&q=80" alt="Aerial view of tropical island"><div class="gallery-cap">ANDAMAN · AERIAL</div></div>
+      <div class="gallery-item img-mask"><img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=700&q=80" alt="Green valley mountains"><div class="gallery-cap">MANALI · VALLEY</div></div>
+      <div class="gallery-item img-mask"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=700&q=80" alt="Mountain peaks over clouds"><div class="gallery-cap">HIMALAYAS · CLOUDS</div></div>
+      <div class="gallery-item img-mask"><img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=700&q=80" alt="Golden hour over mountain lake"><div class="gallery-cap">SPITI · GOLDEN HOUR</div></div>
+      <div class="gallery-item img-mask"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=700&q=80" alt="Winding road through mountains"><div class="gallery-cap">ROAD TRIP · HIMACHAL</div></div>
+      <div class="gallery-item img-mask"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=700&q=80" alt="Forest and mountain landscape"><div class="gallery-cap">COORG · HILLS</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEO ================= -->
+<section class="video-section">
+  <div class="container">
+    <div class="video-frame reveal">
+      <img src="https://images.unsplash.com/photo-1499591934245-40b55745b905?auto=format&fit=crop&w=1600&q=80" alt="Traveller looking over misty mountain valley">
+      <button class="play-btn" aria-label="Play film">
+        <svg viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>
+      </button>
+      <div class="video-caption">WATCH — A WanderNest Journey, 2:14</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Traveller stories</div>
+      <h2>What it's like once you've landed</h2>
+    </div>
+    <div class="test-track-wrap">
+      <div class="test-track" id="testTrack">
+        <div class="test-card"><div class="test-stars">★★★★★</div><p class="quote">"मिताली टूर्स अँड ट्रॅव्हल्सने आमचा गोवा हनिमून अविस्मरणीय बनवला! प्रायव्हेट क्लिफसाईड व्हिला आणि सनसेट डिनर अप्रतिम होते. खूप खूप धन्यवाद!"</p><div class="test-person"><div class="test-avatar"><img src="images/reviewers/reviewer-1.jpg" alt="Prajakta &amp; Rohan Joshi"></div><div><div class="test-name">प्राजक्ता आणि रोहन जोशी (Prajakta &amp; Rohan Joshi)</div><div class="test-loc">Pune → Goa · 🚩 मराठी</div></div></div></div>
+        <div class="test-card"><div class="test-stars">★★★★★</div><p class="quote">"आई-बाबांसोबत काश्मीरची ट्रिप सुरळीत पार पडली. डल लेक हाऊसबोटपासून गुलमर्गपर्यंत मिताली टूर्सच्या टीमने उत्तम काळजी घेतली."</p><div class="test-person"><div class="test-avatar"><img src="images/reviewers/reviewer-2.jpg" alt="Sachin Sawant"></div><div><div class="test-name">सचिन सावंत (Sachin Sawant)</div><div class="test-loc">Mumbai → Kashmir · 🚩 मराठी</div></div></div></div>
+        <div class="test-card"><div class="test-stars">★★★★★</div><p class="quote">"Bhai sach me maza aa gaya! Mitali Tours ne Ladakh ka trip itna awesome plan kiya tha. Pangong Tso bonfire aur driver bhaiya super helpful the!"</p><div class="test-person"><div class="test-avatar"><img src="images/reviewers/reviewer-3.jpg" alt="Rahul Sharma"></div><div><div class="test-name">Rahul Sharma (राहुल शर्मा)</div><div class="test-loc">Delhi NCR → Ladakh · 🇮🇳 Hinglish</div></div></div></div>
+        <div class="test-card"><div class="test-stars">★★★★★</div><p class="quote">"Hamari anniversary trip Andaman me ek dum fairytale jaisi thi! Scuba diving aur candle-light beach dinner super memorable rahe. Highly recommended!"</p><div class="test-person"><div class="test-avatar"><img src="images/reviewers/reviewer-4.jpg" alt="Pooja &amp; Ankit Verma"></div><div><div class="test-name">Pooja &amp; Ankit Verma (पूजा आणि अंकित वर्मा)</div><div class="test-loc">Jaipur → Andaman · 🇮🇳 Hinglish</div></div></div></div>
+        <div class="test-card"><div class="test-stars">★★★★★</div><p class="quote">"As a solo female traveler in Himachal, safety was my highest priority. Mitali Tours curated the loveliest apple orchard boutique stay in Manali."</p><div class="test-person"><div class="test-avatar"><img src="images/reviewers/reviewer-5.jpg" alt="Tanvi Deshmukh"></div><div><div class="test-name">Tanvi Deshmukh (तन्वी देशमुख)</div><div class="test-loc">Hyderabad → Himachal · 🌐 English</div></div></div></div>
+        <div class="test-card"><div class="test-stars">★★★★★</div><p class="quote">"Our 3-day luxury houseboat cruise in Alleppey backwaters was pure bliss. The onboard chef made fresh Karimeen fry. True 5-star hospitality!"</p><div class="test-person"><div class="test-avatar"><img src="images/reviewers/reviewer-6.jpg" alt="Vikramaditya Singhania"></div><div><div class="test-name">Vikramaditya Singhania (विक्रमादित्य सिंघानिया)</div><div class="test-loc">Bengaluru → Kerala · 🌐 English</div></div></div></div>
+      </div>
+    </div>
+    <div class="test-dots" id="testDots"></div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Let's start with a conversation</h2>
+        <p>Tell us where you're dreaming of, and we'll take it from there. No forms, no fuss — just a real reply from a real person.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-label">Office</div><div class="contact-value">Calangute Beach Road, North Goa, Goa, India</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z"/></svg></div>
+          <div><div class="contact-label">Phone</div><div class="contact-value">+91 98765 43210</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg></div>
+          <div><div class="contact-label">Email</div><div class="contact-value">hello@wandernest.in</div></div>
+        </div>
+
+        <div style="margin-top:36px;">
+          <a href="mailto:hello@wandernest.in" class="btn btn-primary">Plan My Trip
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="map-frame reveal">
+        <iframe src="https://www.google.com/maps?q=Calangute+Beach,+North+Goa,+Goa,+India&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="WanderNest Travels office location in Calangute, Goa"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo" aria-label="Mitali Tours and Travels Home">
+          <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img footer-logo-img">
+          <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+        </a>
+        <p>Bespoke luxury holidays crafted by Mitali Tours & Travels — curating unforgettable journeys across India and beyond since 2011.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M14 9h3V5h-3a4 4 0 00-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 011-1z"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4.36a9 9 0 01-2.83 1.08A4.52 4.52 0 0016.11 0c-2.5 0-4.52 2.02-4.52 4.52 0 .35.04.7.11 1.03C7.69 5.4 4.07 3.48 1.64.9a4.48 4.48 0 00-.61 2.27c0 1.57.8 2.95 2.02 3.76A4.48 4.48 0 01.9 6.1v.06c0 2.2 1.56 4.03 3.64 4.44a4.5 4.5 0 01-2.04.08c.58 1.8 2.26 3.12 4.25 3.15A9.05 9.05 0 010 18a12.8 12.8 0 006.92 2c8.3 0 12.85-6.88 12.85-12.85 0-.2 0-.39-.01-.58A9.2 9.2 0 0023 3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="#destinations">Goa</a></li>
+          <li><a href="#destinations">Kashmir</a></li>
+          <li><a href="#destinations">Kerala</a></li>
+          <li><a href="#destinations">Ladakh</a></li>
+          <li><a href="#destinations">Andaman</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay in the loop</h4>
+        <p style="color:rgba(255,255,255,.55);font-size:14px;margin-bottom:18px;">Occasional notes on new routes and quiet-season fares. No spam.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderNest Travels. All rights reserved.</span>
+      <span>Calangute Beach Road, North Goa · +91 98765 43210</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- PRELOADER ---------- */
+  const preloader = document.getElementById('preloader');
+  if (document.documentElement.classList.contains('skip-preloader')) {
+    if (preloader) preloader.remove();
+  } else if (preloader) {
+    try { sessionStorage.setItem('mitali_visited', 'true'); } catch (e) {}
+    const percentEl = document.getElementById('preloadPercent');
+    const barEl = document.getElementById('preloadBar');
+    let p = 0;
+    const loadInterval = setInterval(()=>{
+      p += Math.random()*22;
+      if(p >= 100){
+        p = 100;
+        clearInterval(loadInterval);
+        setTimeout(()=>{ preloader.classList.add('done'); document.body.style.overflow=''; }, 350);
+      }
+      if(percentEl) percentEl.textContent = 'Loading ' + Math.floor(p) + '%';
+      if(barEl) barEl.style.width = p + '%';
+    }, 120);
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('load', ()=>{ document.body.style.overflow=''; });
+  }
+
+  /* ---------- NAVBAR ---------- */
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', ()=>{
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  /* ---------- MOBILE MENU ---------- */
+  const burger = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', ()=>{
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=> mobileMenu.classList.remove('open'));
+  });
+
+  /* ---------- SCROLL REVEAL ---------- */
+  const revealEls = document.querySelectorAll('.reveal, .img-mask');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold:0.15 });
+  revealEls.forEach(el=> io.observe(el));
+
+  /* ---------- COUNTERS (Why choose us) ---------- */
+  const counters = document.querySelectorAll('.why-num');
+  const counterIO = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const el = entry.target;
+        const target = parseFloat(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        const decimals = el.dataset.decimal ? parseInt(el.dataset.decimal) : 0;
+        let cur = 0;
+        const step = target / 60;
+        const anim = setInterval(()=>{
+          cur += step;
+          if(cur >= target){ cur = target; clearInterval(anim); }
+          el.textContent = (decimals ? cur.toFixed(decimals) : Math.floor(cur).toLocaleString('en-IN')) + suffix;
+        }, 20);
+        counterIO.unobserve(el);
+      }
+    });
+  }, { threshold:0.5 });
+  counters.forEach(el=> counterIO.observe(el));
+
+  /* ---------- EXPERIENCE SCROLL PROGRESS ---------- */
+  const expTrack = document.getElementById('expTrack');
+  const expFill = document.getElementById('expFill');
+  expTrack.addEventListener('scroll', ()=>{
+    const max = expTrack.scrollWidth - expTrack.clientWidth;
+    const pct = max > 0 ? (expTrack.scrollLeft / max) * 100 : 0;
+    expFill.style.width = pct + '%';
+  });
+
+  /* ---------- TESTIMONIAL SLIDER ---------- */
+  const track = document.getElementById('testTrack');
+  const dotsWrap = document.getElementById('testDots');
+  const cards = track.children.length;
+  const getVisible = ()=> window.innerWidth <= 640 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
+  let index = 0;
+  let slideCount = Math.max(1, cards - getVisible() + 1);
+
+  function buildDots(){
+    dotsWrap.innerHTML = '';
+    slideCount = Math.max(1, cards - getVisible() + 1);
+    for(let i=0;i<slideCount;i++){
+      const d = document.createElement('div');
+      d.className = 'test-dot' + (i===index?' active':'');
+      d.addEventListener('click', ()=>{ index=i; update(); });
+      dotsWrap.appendChild(d);
+    }
+  }
+  function update(){
+    const cardWidth = track.children[0].getBoundingClientRect().width + 24;
+    track.style.transform = `translateX(-${index*cardWidth}px)`;
+    [...dotsWrap.children].forEach((d,i)=> d.classList.toggle('active', i===index));
+  }
+  buildDots();
+  let autoSlide = setInterval(()=>{
+    index = (index+1) % slideCount;
+    update();
+  }, 4200);
+  track.parentElement.addEventListener('mouseenter', ()=> clearInterval(autoSlide));
+  track.parentElement.addEventListener('mouseleave', ()=>{
+    autoSlide = setInterval(()=>{ index=(index+1)%slideCount; update(); }, 4200);
+  });
+  window.addEventListener('resize', ()=>{ index=0; buildDots(); update(); });
+
+  /* ---------- PLAY BUTTON (demo interaction) ---------- */
+  const playBtn = document.querySelector('.play-btn');
+  if(playBtn){
+    playBtn.addEventListener('click', ()=>{
+      playBtn.style.transform = 'translate(-50%,-50%) scale(.9)';
+      setTimeout(()=> playBtn.style.transform = 'translate(-50%,-50%) scale(1)', 200);
+    });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>WanderNest Travels | Luxury Holidays Across India &amp; Beyond</title>
+  <meta name="description" content="WanderNest Travels crafts bespoke luxury holidays across Goa, Kashmir, Kerala, Ladakh and beyond. Handcrafted itineraries, private journeys, unforgettable memories.">
+  <meta name="keywords" content="luxury travel agency India, Goa travel agency, honeymoon packages India, Kashmir tour packages, Kerala backwaters, Ladakh trips, luxury holidays India">
+  <meta name="author" content="WanderNest Travels">
+  <link rel="canonical" href="http://localhost:3000/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="WanderNest Travels | Luxury Holidays Across India &amp; Beyond">
+  <meta property="og:description" content="Luxury holidays crafted for unforgettable experiences across India and beyond.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230284C7'/%3E%3Cpath d='M20 55 L48 40 L80 50 L48 60 Z' fill='%23FDFDFC'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Mukta:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Hero animations & specific elements */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+      padding-top: 130px;
+      padding-bottom: 70px;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.1);
+      animation: heroZoom 16s var(--ease-soft) forwards;
+    }
+    @keyframes heroZoom { to { transform: scale(1); } }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15,23,42,0.2) 0%, rgba(15,23,42,0.45) 50%, rgba(15,23,42,0.85) 100%);
+    }
+    .hero-cloud {
+      position: absolute;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .hero-badge {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: #fff;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.35);
+      backdrop-filter: blur(8px);
+      padding: 7px 16px;
+      border-radius: var(--radius-full);
+    }
+    .hero-title {
+      font-size: clamp(40px, 6.8vw, 96px);
+      color: #FFFFFF;
+      max-width: 960px;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+    .hero-title span.highlight {
+      color: var(--gold);
+    }
+    .hero-sub {
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 18px;
+      max-width: 520px;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+
+    /* Quick Search Bar in Hero */
+    .hero-search-card {
+      background: rgba(253, 253, 252, 0.95);
+      backdrop-filter: blur(16px);
+      border-radius: var(--radius-xl);
+      padding: 24px 32px;
+      box-shadow: var(--shadow-xl);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      max-width: 1100px;
+      margin-top: 20px;
+    }
+    .search-field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .search-field label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      font-weight: 700;
+    }
+    .search-field select, .search-field input {
+      border: none;
+      background: transparent;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      outline: none;
+      cursor: pointer;
+    }
+    @media (max-width: 992px) {
+      .hero-search-card {
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+      }
+      .hero-search-card .btn {
+        grid-column: span 2;
+      }
+    }
+    @media (max-width: 600px) {
+      .hero-search-card {
+        grid-template-columns: 1fr;
+      }
+      .hero-search-card .btn {
+        grid-column: span 1;
+      }
+    }
+
+    /* Stats Section */
+    .why-section {
+      padding: 110px 0;
+      background: var(--bg);
+    }
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+    .stat-box {
+      text-align: left;
+    }
+    .stat-num {
+      font-family: var(--display);
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 8px;
+      color: var(--ocean);
+    }
+    .stat-label {
+      font-size: 14px;
+      color: var(--text-soft);
+      font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 28px 20px;
+      }
+    }
+
+    /* Video Banner */
+    .video-banner-box {
+      position: relative;
+      height: 480px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      margin: 80px 0;
+      box-shadow: var(--shadow-xl);
+    }
+    .video-banner-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .video-banner-box::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.4);
+    }
+    .play-video-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      transition: transform 0.4s var(--ease), background 0.4s var(--ease);
+      cursor: pointer;
+    }
+    .play-video-btn:hover {
+      transform: translate(-50%, -50%) scale(1.12);
+      background: rgba(255, 255, 255, 0.4);
+    }
+    .play-video-btn svg {
+      width: 28px;
+      height: 28px;
+      fill: #FFFFFF;
+      margin-left: 4px;
+    }
+  </style>
+
+  <!-- Preloader Navigation Controller: Only runs on first session visit or reload -->
+  <script>
+    (function () {
+      try {
+        var isReload = false;
+        if (window.performance) {
+          var navEntries = performance.getEntriesByType && performance.getEntriesByType('navigation');
+          if (navEntries && navEntries.length > 0) {
+            isReload = (navEntries[0].type === 'reload');
+          } else if (performance.navigation) {
+            isReload = (performance.navigation.type === 1);
+          }
+        }
+        var hasVisited = sessionStorage.getItem('mitali_visited');
+        if (!isReload && hasVisited) {
+          document.documentElement.classList.add('skip-preloader');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==================== LUXURY LOGO PRELOADER ==================== -->
+  <div id="sitePreloader" aria-hidden="true">
+    <div class="preloader-bg-ambient"></div>
+    <div class="preloader-content">
+      <div class="preloader-visual">
+        <div class="preloader-pulse-ring"></div>
+        <div class="preloader-orbit">
+          <div class="preloader-orbit-plane">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="preloader-medallion">
+          <img src="images/mitali-logo.png" alt="Mitali Tours &amp; Travels Logo" class="preloader-logo-img">
+        </div>
+      </div>
+      <div class="preloader-brand-title">
+        <span class="preloader-name-main">Mitali</span>
+        <span class="preloader-name-sub">Tours &amp; Travels</span>
+      </div>
+      <p class="preloader-tagline">Crafting your bespoke journey...</p>
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-track">
+          <div class="preloader-bar-fill"></div>
+        </div>
+        <div class="preloader-meta">
+          <span>INITIALIZING</span>
+          <span class="preloader-counter">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="siteHeader">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Mitali Tours and Travels Home">
+        <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img">
+        <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+      </a>
+
+      <nav class="links">
+        <a href="index.html" class="active">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-primary open-booking-modal">Plan My Trip</button>
+
+        <button class="burger" id="burgerBtn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="active">Home</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="wishlist.html">Saved Wishlist ❤️</a>
+    <div class="mobile-actions">
+      <button class="btn btn-primary open-booking-modal" style="width: 100%;">Plan My Trip</button>
+    </div>
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Turquoise sea and tropical coastline at golden hour">
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-badges">
+        <span class="hero-badge">GOI ✈ IXL · 15+ Years Curating Journeys</span>
+        <span class="hero-badge">Private Chauffeurs &amp; Luxury Stays</span>
+        <span class="hero-badge">Est. Goa, India</span>
+      </div>
+
+      <h1 class="hero-title">
+        Discover The World's <br>
+        <span class="highlight">Most Beautiful Journeys</span>
+      </h1>
+
+      <p class="hero-sub">
+        Handcrafted luxury holidays across Kashmir, Goa, Kerala, Ladakh and beyond. Private guides, curated stays, and effortless pacing.
+      </p>
+
+      <!-- Interactive Quick Search / Book Bar -->
+      <div class="hero-search-card">
+        <div class="search-field">
+          <label for="homeDestSelect">Where To?</label>
+          <select id="homeDestSelect">
+            <option value="goa">Goa Beaches &amp; Latin Quarter</option>
+            <option value="kashmir" selected>Kashmir Valleys &amp; Houseboats</option>
+            <option value="kerala">Kerala Backwaters &amp; Munnar</option>
+            <option value="ladakh">Ladakh High Altitude Desert</option>
+            <option value="andaman">Andaman Coral Islands</option>
+            <option value="jaipur">Jaipur Royal Heritage</option>
+          </select>
+        </div>
+
+        <div class="search-field">
+          <label for="homeMonthSelect">Travel Month</label>
+          <select id="homeMonthSelect">
+            <option>November 2026</option>
+            <option>December 2026</option>
+            <option>January 2027</option>
+            <option>February 2027</option>
+            <option>March 2027</option>
+          </select>
+        </div>
+
+        <div class="search-field">
+          <label for="homeStyleSelect">Trip Style</label>
+          <select id="homeStyleSelect">
+            <option>Honeymoon &amp; Romantic</option>
+            <option>Family Holiday</option>
+            <option>Adventure &amp; Trekking</option>
+            <option>Solo Backpacking</option>
+            <option>Luxury Wellness</option>
+          </select>
+        </div>
+
+        <div class="search-field">
+          <label for="homeGuestsSelect">Travelers</label>
+          <select id="homeGuestsSelect">
+            <option>2 Adults (Couple)</option>
+            <option>4 Adults (Family / Group)</option>
+            <option>1 Adult (Solo)</option>
+            <option>6+ (Private Group)</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" id="homeSearchBtn" style="padding: 16px 28px;">
+          Find Tours
+          <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRUST STATS ================= -->
+  <section class="why-section">
+    <div class="container">
+      <div class="stats-strip reveal">
+        <div class="stat-box">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Years of slow travel curation</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" style="color: var(--sunset);">10,000+</div>
+          <div class="stat-label">Delighted guests across India</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" style="color: var(--mint);">200+</div>
+          <div class="stat-label">Handpicked luxury boutique stays</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" style="color: var(--gold-dark);">4.9★</div>
+          <div class="stat-label">Average traveller verified rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED DESTINATIONS ================= -->
+  <section style="padding: 100px 0; background: var(--bg-section);">
+    <div class="container">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 50px; flex-wrap: wrap; gap: 20px;">
+        <div class="section-head reveal" style="margin-bottom: 0;">
+          <div class="eyebrow">Iconic Landscapes</div>
+          <h2>Eight Journeys Worth Crossing The Country For</h2>
+          <p>From emerald backwater sunsets to Himalayan silence — every destination is chosen for the lasting memory it leaves behind.</p>
+        </div>
+        <a href="packages.html" class="btn btn-ghost">
+          Explore Holiday Packages
+          <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg>
+        </a>
+      </div>
+
+      <div class="dest-grid">
+        <!-- Goa -->
+        <div class="dest-card featured-tall reveal" data-dest-modal="goa">
+          <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80" alt="Palm-lined beach in Goa">
+          <span class="dest-badge-top">West Coast</span>
+          <div class="dest-info">
+            <span class="dest-num">01 — GOA</span>
+            <h3>Goa Shores &amp; Villas</h3>
+            <p>Golden sand coves, private catamaran sunsets &amp; Portuguese heritage lanes.</p>
+            <div class="dest-meta-row">
+              <span class="dest-price">From <span data-inr-price="28000">₹28,000</span></span>
+              <span class="dest-view-btn">Quick View &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kashmir -->
+        <div class="dest-card reveal" data-dest-modal="kashmir">
+          <img src="https://www.worldatlas.com/upload/70/33/ab/shutterstock-115227475.jpg" alt="Snow capped mountains of Kashmir">
+          <span class="dest-badge-top">Himalayas</span>
+          <div class="dest-info">
+            <span class="dest-num">02 — KASHMIR</span>
+            <h3>Kashmir Dal Lake</h3>
+            <p>Carved cedar wood houseboats &amp; alpine meadows.</p>
+            <div class="dest-meta-row">
+              <span class="dest-price">From <span data-inr-price="42000">₹42,000</span></span>
+              <span class="dest-view-btn">Quick View &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kerala -->
+        <div class="dest-card reveal" data-dest-modal="kerala">
+          <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=700&q=80" alt="Kerala backwaters houseboat">
+          <span class="dest-badge-top">South Coast</span>
+          <div class="dest-info">
+            <span class="dest-num">03 — KERALA</span>
+            <h3>Kerala Backwaters</h3>
+            <p>Private luxury Kettuvallam &amp; mist-clad tea gardens.</p>
+            <div class="dest-meta-row">
+              <span class="dest-price">From <span data-inr-price="34000">₹34,000</span></span>
+              <span class="dest-view-btn">Quick View &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ladakh -->
+        <div class="dest-card reveal" data-dest-modal="ladakh">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="High altitude desert of Ladakh">
+          <span class="dest-badge-top">High Altitude</span>
+          <div class="dest-info">
+            <span class="dest-num">04 — LADAKH</span>
+            <h3>Ladakh Pangong Tso</h3>
+            <p>High desert moonscapes &amp; ancient Tibetan gompas.</p>
+            <div class="dest-meta-row">
+              <span class="dest-price">From <span data-inr-price="48000">₹48,000</span></span>
+              <span class="dest-view-btn">Quick View &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Andaman -->
+        <div class="dest-card reveal" data-dest-modal="andaman">
+          <img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=700&q=80" alt="Andaman islands turquoise water">
+          <span class="dest-badge-top">Island Haven</span>
+          <div class="dest-info">
+            <span class="dest-num">05 — ANDAMAN</span>
+            <h3>Andaman Coral Reefs</h3>
+            <p>Turquoise waters, scuba diving &amp; secluded white beaches.</p>
+            <div class="dest-meta-row">
+              <span class="dest-price">From <span data-inr-price="52000">₹52,000</span></span>
+              <span class="dest-view-btn">Quick View &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= POPULAR CURATED PACKAGES ================= -->
+  <section style="padding: 120px 0; background: var(--bg);">
+    <div class="container">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 50px; flex-wrap: wrap; gap: 20px;">
+        <div class="section-head reveal" style="margin-bottom: 0;">
+          <div class="eyebrow">Handcrafted Itineraries</div>
+          <h2>Packages Built Around How You Like To Travel</h2>
+          <p>Every itinerary is completely flexible — private guides, 5-star heritage stays, and pacing tailored to your rhythm.</p>
+        </div>
+        <a href="packages.html" class="btn btn-ghost">
+          Browse All Packages
+          <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg>
+        </a>
+      </div>
+
+      <div class="pkg-grid">
+        <!-- Package 1: Goa -->
+        <div class="pkg-card reveal">
+          <div class="pkg-img">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=80" alt="Couple on beach at sunset">
+            <span class="pkg-tag">Honeymoon</span>
+            <button class="pkg-heart-btn" data-id="pkg-goa-honeymoon" title="Save to wishlist">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+          <div class="pkg-body">
+            <h3>Goa Honeymoon Escape</h3>
+            <div class="pkg-meta">
+              <span>5N / 6D</span>
+              <span class="dot">·</span>
+              <span>Goa</span>
+              <span class="dot">·</span>
+              <span>Private Pool Villa</span>
+            </div>
+            <ul class="pkg-highlights">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Candlelight Beach Dinner with Wine</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Private Sunset Yacht Cruise on Mandovi</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dedicated Chauffeur in Luxury Sedan</li>
+            </ul>
+            <div class="pkg-foot">
+              <div class="pkg-price">
+                <span data-inr-price="64900">₹64,900</span>
+                <span>per couple</span>
+              </div>
+              <div class="pkg-actions">
+                <button class="btn btn-primary btn-sm open-booking-modal" data-package-id="goa-honeymoon" data-package-title="Goa Honeymoon Escape">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 2: Kerala -->
+        <div class="pkg-card reveal">
+          <div class="pkg-img">
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=700&q=80" alt="Kerala backwaters houseboat">
+            <span class="pkg-tag">Family</span>
+            <button class="pkg-heart-btn" data-id="pkg-kerala-family" title="Save to wishlist">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+          <div class="pkg-body">
+            <h3>Kerala Family Backwaters Retreat</h3>
+            <div class="pkg-meta">
+              <span>6N / 7D</span>
+              <span class="dot">·</span>
+              <span>Alleppey &amp; Munnar</span>
+              <span class="dot">·</span>
+              <span>All Meals</span>
+            </div>
+            <ul class="pkg-highlights">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Over-night Luxury Houseboat Cruise</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Munnar Tea Plantation &amp; Waterfall Trek</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Periyar Wildlife Sanctuary Safari</li>
+            </ul>
+            <div class="pkg-foot">
+              <div class="pkg-price">
+                <span data-inr-price="58500">₹58,500</span>
+                <span>family of 4</span>
+              </div>
+              <div class="pkg-actions">
+                <button class="btn btn-primary btn-sm open-booking-modal" data-package-id="kerala-family" data-package-title="Kerala Family Retreat">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 3: Ladakh -->
+        <div class="pkg-card reveal">
+          <div class="pkg-img">
+            <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=700&q=80" alt="Ladakh mountains">
+            <span class="pkg-tag">Adventure</span>
+            <button class="pkg-heart-btn" data-id="pkg-ladakh-adventure" title="Save to wishlist">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+          <div class="pkg-body">
+            <h3>Ladakh High Altitude Trail</h3>
+            <div class="pkg-meta">
+              <span>7N / 8D</span>
+              <span class="dot">·</span>
+              <span>Leh &amp; Nubra</span>
+              <span class="dot">·</span>
+              <span>Oxygen Inclusions</span>
+            </div>
+            <ul class="pkg-highlights">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Khardung La &amp; Chang La High Passes</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Luxury Glamping at Pangong Tso Lake</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Bactrian Camel Safari in Hunder Dunes</li>
+            </ul>
+            <div class="pkg-foot">
+              <div class="pkg-price">
+                <span data-inr-price="49900">₹49,900</span>
+                <span>per person</span>
+              </div>
+              <div class="pkg-actions">
+                <button class="btn btn-primary btn-sm open-booking-modal" data-package-id="ladakh-adventure" data-package-title="Ladakh Adventure Trail">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VIDEO SHOWCASE ================= -->
+  <section style="padding: 40px 0; background: var(--bg);">
+    <div class="container">
+      <div class="video-banner-box reveal">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1600&q=80" alt="Scenic road trip along mountain passes">
+        <div class="play-video-btn" onclick="alert('Playing WanderNest 4K Cinematic Journey Showcase...')" title="Play Cinematic Video">
+          <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div style="position: absolute; bottom: 30px; left: 30px; z-index: 2; color: #fff;">
+          <div class="eyebrow light">CINEMATIC PREVIEW</div>
+          <h3 style="font-size: 28px; color: #fff;">Across High Passes &amp; Palm Canopies</h3>
+          <p style="font-size: 14px; color: rgba(255,255,255,0.85); font-family: var(--mono);">4K Travelogue · India Uncovered</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCES & SIGNATURE WONDERS ================= -->
+  <section style="padding: 110px 0 60px; background: var(--bg-section);" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Signature Wanderlust</div>
+        <h2>Six Ways To Rediscover India</h2>
+        <p>Private guides, untouched detours, and access to places you cannot simply book through an online travel app.</p>
+      </div>
+
+      <div class="exp-grid">
+        <!-- Exp 1 -->
+        <div class="exp-card reveal">
+          <div class="exp-img">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80" alt="Kerala backwater luxury boat">
+          </div>
+          <div class="exp-body">
+            <span class="badge badge-mint" style="margin-bottom: 8px;">Private Waterway</span>
+            <h3>Alleppey Luxury Kettuvallam Living</h3>
+            <p>Gliding through mirror-like canal backwaters on a private carved cedar barge with personal chef and butler catering local coconut curry delicacies.</p>
+            <button class="btn btn-ghost btn-sm open-booking-modal" data-package-id="kerala-family" data-package-title="Alleppey Kettuvallam Experience">Inquire Experience &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Exp 2 -->
+        <div class="exp-card reveal">
+          <div class="exp-img">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" alt="High altitude desert Ladakh">
+          </div>
+          <div class="exp-body">
+            <span class="badge badge-gold" style="margin-bottom: 8px;">High Altitude</span>
+            <h3>Stargazing Glamping at Pangong Tso</h3>
+            <p>Sleep in insulated geodome tents at 14,270 ft. Warm yourself by a cedar wood fire while the entire galaxy unfolds in crystal clear unpolluted Himalayan skies.</p>
+            <button class="btn btn-ghost btn-sm open-booking-modal" data-package-id="ladakh-adventure" data-package-title="Pangong Stargazing Experience">Inquire Experience &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Exp 3 -->
+        <div class="exp-card reveal">
+          <div class="exp-img">
+            <img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=800&q=80" alt="Scuba diving turquoise water Andaman">
+          </div>
+          <div class="exp-body">
+            <span class="badge badge-ocean" style="margin-bottom: 8px;">Oceanic Safari</span>
+            <h3>PADI Scuba &amp; Coral Garden Walks</h3>
+            <p>Dive into pristine transparent waters off Havelock and Neil islands alongside sea turtles, manta rays, and thriving kaleidoscopic coral reefs.</p>
+            <button class="btn btn-ghost btn-sm open-booking-modal" data-package-id="andaman-islands" data-package-title="Andaman Scuba Charter Experience">Inquire Experience &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Exp 4 -->
+        <div class="exp-card reveal">
+          <div class="exp-img">
+            <img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=800&q=80" alt="Udaipur palace on lake">
+          </div>
+          <div class="exp-body">
+            <span class="badge badge-sunset" style="margin-bottom: 8px;">Royal Heritage</span>
+            <h3>Royal Haveli Stays &amp; Sunset Cruises</h3>
+            <p>Live like Rajput royalty in converted 18th-century lake palaces with private terrace dining, vintage car transfers, and bespoke gemstone shopping tours.</p>
+            <button class="btn btn-ghost btn-sm open-booking-modal" data-package-id="rajasthan-royal" data-package-title="Rajasthan Royal Haveli Experience">Inquire Experience &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Exp 5 -->
+        <div class="exp-card reveal">
+          <div class="exp-img">
+            <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=80" alt="Coffee plantation resort hills">
+          </div>
+          <div class="exp-body">
+            <span class="badge badge-mint" style="margin-bottom: 8px;">Slow Living</span>
+            <h3>Coorg &amp; Munnar Tea Estate Havens</h3>
+            <p>Wake up to morning birdsong and mountain mist. Hand-pick single origin Arabica coffee cherries, taste rare orthodox tea brews, and unwind in antique colonial villas.</p>
+            <button class="btn btn-ghost btn-sm open-booking-modal" data-package-id="coorg-weekend" data-package-title="Coorg Plantation Experience">Inquire Experience &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Exp 6 -->
+        <div class="exp-card reveal">
+          <div class="exp-img">
+            <img src="https://images.unsplash.com/photo-1587922546307-776227941871?auto=format&fit=crop&w=800&q=80" alt="White desert salt Kutch">
+          </div>
+          <div class="exp-body">
+            <span class="badge badge-gold" style="margin-bottom: 8px;">Desert Miracle</span>
+            <h3>White Desert Moonrise &amp; Rogan Art</h3>
+            <p>Witness the ethereal spectacle of the Great Rann gleaming like liquid silver at moonrise. Meet 8th-generation masters of rare Rogan fabric art in Nirona village.</p>
+            <button class="btn btn-ghost btn-sm open-booking-modal" data-package-id="custom-trip" data-package-title="Kutch Salt Desert Experience">Inquire Experience &rarr;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Custom Trip Builder Widget -->
+      <div class="trip-builder reveal" style="margin-top: 50px;">
+        <div class="tb-grid">
+          <div>
+            <div class="eyebrow light">Interactive Planner</div>
+            <h2 style="color: #fff; font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 14px;">Build Your Custom Holiday</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 15px; margin-bottom: 30px; line-height: 1.6;">
+              Select your travel mood, duration, and luxury style below. Our dynamic engine crafts an immediate recommended journey with price estimates.
+            </p>
+
+            <form id="tbInteractiveForm" class="tb-form">
+              <div class="tb-field">
+                <label class="tb-label" for="tbVibe">Travel Mood / Vibe</label>
+                <select id="tbVibe" class="tb-select">
+                  <option value="romance" data-base="65000">Honeymoon &amp; Romantic Serenity</option>
+                  <option value="mountains" data-base="45000">Himalayan Solitude &amp; Snow Passes</option>
+                  <option value="heritage" data-base="55000">Royal Havelis &amp; Heritage Feasts</option>
+                  <option value="nature" data-base="42000">Emerald Backwaters &amp; Tea Mist</option>
+                  <option value="coastal" data-base="38000">Tropical Coastal Retreat &amp; Villas</option>
+                </select>
+              </div>
+
+              <div class="tb-field">
+                <label class="tb-label" for="tbDuration">Duration Window</label>
+                <select id="tbDuration" class="tb-select">
+                  <option value="5" data-mult="1.0">4 Nights / 5 Days (Classic Short)</option>
+                  <option value="7" data-mult="1.35" selected>6 Nights / 7 Days (Recommended)</option>
+                  <option value="10" data-mult="1.8">9 Nights / 10 Days (Deep Immersion)</option>
+                  <option value="14" data-mult="2.4">13 Nights / 14 Days (Grand Circuit)</option>
+                </select>
+              </div>
+
+              <div class="tb-field">
+                <label class="tb-label" for="tbTier">Luxury Tier</label>
+                <select id="tbTier" class="tb-select">
+                  <option value="boutique" data-tier-mult="1.0">Boutique Heritage Stays (4★+)</option>
+                  <option value="luxury" data-tier-mult="1.4" selected>Signature 5★ Luxury Resorts</option>
+                  <option value="palace" data-tier-mult="2.1">Royal Palace &amp; Private Villa Estate</option>
+                </select>
+              </div>
+
+              <div class="tb-field">
+                <label class="tb-label" for="tbGuests">Travelers Count</label>
+                <select id="tbGuests" class="tb-select">
+                  <option value="couple" selected>Couple (2 Adults)</option>
+                  <option value="family">Family (2 Adults + 2 Kids)</option>
+                  <option value="solo">Solo Traveler (1 Adult)</option>
+                  <option value="group">Private Group (4-6 Adults)</option>
+                </select>
+              </div>
+
+              <div class="tb-field full">
+                <button type="button" id="tbCalculateBtn" class="btn btn-sunset" style="width: 100%; margin-top: 10px;">
+                  Update Custom Itinerary Recommendation &rarr;
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Dynamic Result Card -->
+          <div class="tb-result-card" id="tbResultBox">
+            <span class="badge badge-gold" id="tbBadge">Recommended Match</span>
+            <h3 class="tb-result-title" id="tbTitle" style="margin-top: 10px;">Kashmir &amp; Dal Lake Royal Suite Journey</h3>
+            <p class="tb-result-desc" id="tbDesc">
+              6 Nights / 7 Days featuring a private cedar houseboat stay, Gulmarg Gondola Phase 2 access, and a luxury private SUV chauffeur.
+            </p>
+
+            <div style="background: rgba(255,255,255,0.06); padding: 14px; border-radius: var(--radius-md); margin-bottom: 20px;">
+              <div style="font-family: var(--mono); font-size: 11px; color: var(--sky); margin-bottom: 6px;">CURATED INCLUSIONS:</div>
+              <ul id="tbInclusions" style="font-size: 13px; color: rgba(255,255,255,0.85); display: flex; flex-direction: column; gap: 4px;">
+                <li>✓ 5-Star Heritage Palace / Houseboat stays</li>
+                <li>✓ Private dedicated Chauffeur throughout</li>
+                <li>✓ Gourmet Breakfast &amp; Candlelight Dinners</li>
+                <li>✓ VIP Tourism &amp; Gondola passes</li>
+              </ul>
+            </div>
+
+            <div class="tb-estimate-row">
+              <div>
+                <span style="font-size: 12px; color: rgba(255,255,255,0.7);">Estimated Custom Budget</span>
+                <div class="tb-estimate-price" id="tbPriceDisplay">₹87,750</div>
+              </div>
+              <button class="btn btn-primary" id="tbBookNowBtn">Book This Journey</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Five-Step Journey Arc -->
+      <div style="margin-top: 70px;">
+        <div class="section-head reveal">
+          <div class="eyebrow">The WanderNest Standard</div>
+          <h2>Five Moments, One Seamless Story</h2>
+          <p>From your initial phone call to the moments you'll replay for years — here is how our private journeys unfold.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
+          <div class="exp-step reveal" style="min-width: 0;">
+            <span class="exp-index">01 / Curate</span>
+            <h3 style="font-size: 20px;">Discovery</h3>
+            <p style="font-size: 13.5px;">A relaxed consultation to capture your pace, style, and culinary wishes.</p>
+          </div>
+          <div class="exp-step reveal" style="min-width: 0;">
+            <span class="exp-index">02 / Reserve</span>
+            <h3 style="font-size: 20px;">Booking</h3>
+            <p style="font-size: 13.5px;">VIP stays, permits, and private transfers secured with transparent quotes.</p>
+          </div>
+          <div class="exp-step reveal" style="min-width: 0;">
+            <span class="exp-index">03 / Chaperone</span>
+            <h3 style="font-size: 20px;">Concierge</h3>
+            <p style="font-size: 13.5px;">A dedicated 24/7 specialist manages luggage, check-ins, and reservations.</p>
+          </div>
+          <div class="exp-step reveal" style="min-width: 0;">
+            <span class="exp-index">04 / Immerse</span>
+            <h3 style="font-size: 20px;">Detours</h3>
+            <p style="font-size: 13.5px;">Secret viewpoints, local home-cooked banquets, and hidden heritage trails.</p>
+          </div>
+          <div class="exp-step reveal" style="min-width: 0;">
+            <span class="exp-index">05 / Cherish</span>
+            <h3 style="font-size: 20px;">Memories</h3>
+            <p style="font-size: 13.5px;">Curated photos, high-res keepsakes, and early-bird status for your next trip.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REVIEWS & TESTIMONIALS ================= -->
+  <section style="padding: 110px 0 120px; background: var(--bg);" id="reviews">
+    <div class="container">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 24px;">
+        <div class="section-head reveal" style="margin-bottom: 0;">
+          <div class="eyebrow">Verified Feedback</div>
+          <h2>Loved By Discerning Travellers</h2>
+          <p>Read authentic feedback from couples, families, and solo wanderers who travelled with us.</p>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: var(--display); font-size: 38px; color: var(--ocean); font-weight: 600;">4.9★</span>
+            <span style="font-size: 13px; color: var(--text-soft); line-height: 1.3;">Over 10,000+ happy <br>travellers across India</span>
+          </div>
+          <button class="btn btn-sunset" id="writeReviewBtn">✍ Write A Review</button>
+        </div>
+      </div>
+
+      <!-- Filter Bar for Reviews -->
+      <div class="filter-bar" style="margin-bottom: 30px;">
+        <div class="filter-pills" id="reviewFilterPills">
+          <button class="filter-pill active" data-filter="all">All Reviews (सर्व)</button>
+          <button class="filter-pill" data-filter="marathi">🚩 मराठी</button>
+          <button class="filter-pill" data-filter="hinglish">🇮🇳 Hinglish</button>
+          <button class="filter-pill" data-filter="english">🌐 English</button>
+          <button class="filter-pill" data-filter="honeymoon">Honeymooners</button>
+          <button class="filter-pill" data-filter="family">Family</button>
+          <button class="filter-pill" data-filter="adventure">Adventure</button>
+          <button class="filter-pill" data-filter="solo">Solo Travel</button>
+        </div>
+      </div>
+
+      <!-- Reviews Grid -->
+      <div class="reviews-grid" id="reviewsContainer">
+        <!-- Review 1: Marathi (Honeymoon) -->
+        <div class="review-card" data-category="honeymoon" data-lang="marathi">
+          <div class="review-header">
+            <span class="review-stars">★★★★★</span>
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span class="review-lang-badge marathi">मराठी</span>
+              <span class="review-trip-badge">Honeymoon · Goa</span>
+            </div>
+          </div>
+          <p class="review-quote">"मिताली टूर्स अँड ट्रॅव्हल्सने आमचा हनिमून अविस्मरणीय बनवला! गोवा येथील प्रायव्हेट क्लिफसाईड व्हिला, सनसेट डिनर आणि ड्रायव्हरची सोय इतकी उत्कृष्ट होती की आम्हाला कशाचीही काळजी करावी लागली नाही. प्रत्येक गोष्ट वेळेवर आणि अतिशय सुंदर नियोजित होती. खूप खूप धन्यवाद!"</p>
+          <div class="review-author">
+            <div class="review-avatar">
+              <img src="images/reviewers/reviewer-1.jpg" alt="Prajakta &amp; Rohan Joshi">
+            </div>
+            <div>
+              <div class="review-name">प्राजक्ता आणि रोहन जोशी (Prajakta &amp; Rohan Joshi)</div>
+              <div class="review-loc">Pune, Maharashtra · Travelled Dec 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2: Marathi (Family) -->
+        <div class="review-card" data-category="family" data-lang="marathi">
+          <div class="review-header">
+            <span class="review-stars">★★★★★</span>
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span class="review-lang-badge marathi">मराठी</span>
+              <span class="review-trip-badge">Family · Kashmir</span>
+            </div>
+          </div>
+          <p class="review-quote">"आई-बाबांसोबत काश्मीरची ट्रिप करायची होती, पण थंडी आणि तब्येतीची थोडी काळजी वाटत होती. मिताली टूर्सच्या टीमने डल लेक हाऊसबोटपासून गुलमर्गपर्यंत व्हीलचेअर, रूम हिटर आणि शुद्ध जेवणाची संपूर्ण काळजी घेतली. घरच्या माणसासारखी आपुलकीने मदत केली!"</p>
+          <div class="review-author">
+            <div class="review-avatar">
+              <img src="images/reviewers/reviewer-2.jpg" alt="Sachin Sawant">
+            </div>
+            <div>
+              <div class="review-name">सचिन सावंत (Sachin Sawant)</div>
+              <div class="review-loc">Thane, Mumbai · Travelled Jan 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3: Hinglish (Adventure) -->
+        <div class="review-card" data-category="adventure" data-lang="hinglish">
+          <div class="review-header">
+            <span class="review-stars">★★★★★</span>
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span class="review-lang-badge hinglish">Hinglish</span>
+              <span class="review-trip-badge">Adventure · Ladakh</span>
+            </div>
+          </div>
+          <p class="review-quote">"Bhai sach me maza aa gaya! Mitali Tours ne Ladakh ka itinerary itna top-notch plan kiya tha ki Pangong Lake par stargazing bonfire se lekar Nubra Valley tak sab smoothly manage ho gaya. Driver bhaiya super polite the aur car me oxygen cylinder se total peace of mind mila. 10/10 recommended!"</p>
+          <div class="review-author">
+            <div class="review-avatar">
+              <img src="images/reviewers/reviewer-3.jpg" alt="Rahul Sharma">
+            </div>
+            <div>
+              <div class="review-name">Rahul Sharma &amp; Friends (राहुल शर्मा)</div>
+              <div class="review-loc">Gurugram, Delhi NCR · Travelled Aug 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4: Hinglish (Honeymoon / Anniversary) -->
+        <div class="review-card" data-category="honeymoon" data-lang="hinglish">
+          <div class="review-header">
+            <span class="review-stars">★★★★★</span>
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span class="review-lang-badge hinglish">Hinglish</span>
+              <span class="review-trip-badge">Honeymoon · Andaman</span>
+            </div>
+          </div>
+          <p class="review-quote">"Hamari anniversary trip Andaman me ek dum fairytale jaisi thi! Havelock island par private beach candle-light dinner aur Elephant beach par scuba diving ka experience kamaal ka raha. Zero stress, no hidden charges. Mitali Tours ki team WhatsApp par daily check kar rahi thi. Truly memorable!"</p>
+          <div class="review-author">
+            <div class="review-avatar">
+              <img src="images/reviewers/reviewer-4.jpg" alt="Pooja &amp; Ankit Verma">
+            </div>
+            <div>
+              <div class="review-name">Pooja &amp; Ankit Verma (पूजा आणि अंकित वर्मा)</div>
+              <div class="review-loc">Jaipur, Rajasthan · Travelled Feb 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5: English (Solo) -->
+        <div class="review-card" data-category="solo" data-lang="english">
+          <div class="review-header">
+            <span class="review-stars">★★★★★</span>
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span class="review-lang-badge english">English</span>
+              <span class="review-trip-badge">Solo · Himachal</span>
+            </div>
+          </div>
+          <p class="review-quote">"As a solo female traveler, safety and authentic local immersion were paramount for me. Mitali Tours &amp; Travels curated the loveliest apple orchard boutique retreat in Old Manali with verified local hosts. Their 24/7 concierge checked in daily without being intrusive. Truly liberating experience!"</p>
+          <div class="review-author">
+            <div class="review-avatar">
+              <img src="images/reviewers/reviewer-5.jpg" alt="Tanvi Deshmukh">
+            </div>
+            <div>
+              <div class="review-name">Tanvi Deshmukh (तन्वी देशमुख)</div>
+              <div class="review-loc">Hyderabad, Telangana · Travelled Oct 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6: English (Family) -->
+        <div class="review-card" data-category="family" data-lang="english">
+          <div class="review-header">
+            <span class="review-stars">★★★★★</span>
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span class="review-lang-badge english">English</span>
+              <span class="review-trip-badge">Family · Kerala</span>
+            </div>
+          </div>
+          <p class="review-quote">"Our 3-day private luxury houseboat cruise in Alleppey was the calmest, most restorative journey of the year. The private chef made freshly caught Karimeen fry and traditional tapioca that my family still raves about. Mitali Tours delivers impeccable, genuine five-star hospitality."</p>
+          <div class="review-author">
+            <div class="review-avatar">
+              <img src="images/reviewers/reviewer-6.jpg" alt="Vikramaditya Singhania">
+            </div>
+            <div>
+              <div class="review-name">Vikramaditya Singhania (विक्रमादित्य सिंघानिया)</div>
+              <div class="review-loc">Bengaluru, Karnataka · Travelled Nov 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WRITE A REVIEW MODAL ================= -->
+  <div class="modal-overlay" id="reviewModal">
+    <div class="modal-card" style="max-width: 580px;">
+      <button class="modal-close-btn" id="closeReviewModal">&times;</button>
+      <div class="modal-header">
+        <div class="eyebrow">Share Your Journey</div>
+        <h3>Write A Review</h3>
+        <p>Tell us about your trip with WanderNest to inspire fellow travellers.</p>
+      </div>
+
+      <form id="submitReviewForm">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="revName">Your Full Name</label>
+            <input type="text" id="revName" placeholder="e.g. Meera Kapoor" required>
+          </div>
+
+          <div class="form-field">
+            <label for="revCity">Your City</label>
+            <input type="text" id="revCity" placeholder="e.g. Bangalore" required>
+          </div>
+
+          <div class="form-field">
+            <label for="revDest">Destination Travelled</label>
+            <select id="revDest" required>
+              <option value="Goa">Goa</option>
+              <option value="Kashmir">Kashmir</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Ladakh">Ladakh</option>
+              <option value="Andaman">Andaman</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Himachal">Himachal</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="revType">Trip Style</label>
+            <select id="revType" required>
+              <option value="honeymoon">Honeymoon</option>
+              <option value="family">Family Holiday</option>
+              <option value="adventure">Adventure &amp; Trekking</option>
+              <option value="solo">Solo Travel</option>
+            </select>
+          </div>
+
+          <div class="form-field full">
+            <label for="revRating">Rating</label>
+            <select id="revRating">
+              <option value="5">★★★★★ (5 Stars - Exceptional)</option>
+              <option value="4">★★★★☆ (4 Stars - Great)</option>
+            </select>
+          </div>
+
+          <div class="form-field full">
+            <label for="revQuote">Your Experience &amp; Highlights</label>
+            <textarea id="revQuote" rows="4" placeholder="How was your stay, chauffeur, food, and concierge?" required></textarea>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px;">
+          <button type="button" class="btn btn-ghost" id="cancelReview">Cancel</button>
+          <button type="submit" class="btn btn-primary">Publish Review &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= NEWSLETTER & CTA ================= -->
+  <section style="padding: 100px 0; background: linear-gradient(135deg, #0F172A 0%, #0369A1 100%); color: #fff;">
+    <div class="container" style="text-align: center;">
+      <div class="eyebrow light" style="justify-content: center;">Start Planning</div>
+      <h2 style="color: #fff; font-size: clamp(32px, 4.5vw, 56px); margin-bottom: 20px;">Ready For Your Next Journey?</h2>
+      <p style="color: rgba(255,255,255,0.85); font-size: 18px; max-width: 600px; margin: 0 auto 36px;">
+        Tell us where you want to wander. We'll design a customized itinerary within 24 hours — no obligations, just inspiration.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <button class="btn btn-white open-booking-modal">Plan My Trip Now</button>
+        <a href="contact.html" class="btn btn-ghost" style="color: #fff; border-color: rgba(255,255,255,0.4);">Speak To A Travel Designer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Mitali Tours and Travels Home">
+            <img src="images/mitali-logo.png" alt="Mitali Tours & Travels Logo" class="site-logo-img footer-logo-img">
+            <span class="logo-text">Mitali <span>Tours &amp; Travels</span></span>
+          </a>
+          <p>Bespoke luxury holidays crafted by Mitali Tours & Travels — curating unforgettable journeys across the subcontinent and beyond since 2011.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M14 9h3V5h-3a4 4 0 00-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 011-1z"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4.36a9 9 0 01-2.83 1.08A4.52 4.52 0 0016.11 0c-2.5 0-4.52 2.02-4.52 4.52 0 .35.04.7.11 1.03C7.69 5.4 4.07 3.48 1.64.9a4.48 4.48 0 00-.61 2.27c0 1.57.8 2.95 2.02 3.76A4.48 4.48 0 01.9 6.1v.06c0 2.2 1.56 4.03 3.64 4.44a4.5 4.5 0 01-2.04.08c.58 1.8 2.26 3.12 4.25 3.15A9.05 9.05 0 010 18a12.8 12.8 0 006.92 2c8.3 0 12.85-6.88 12.85-12.85 0-.2 0-.39-.01-.58A9.2 9.2 0 0023 3z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="packages.html">Holiday Packages</a></li>
+            <li><a href="#experience">Experiences</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="#reviews">Traveller Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Our Travel Curators</a></li>
+            <li><a href="wishlist.html">Saved Wishlist Trips</a></li>
+            <li><a href="contact.html">Contact &amp; Map</a></li>
+            <li><a href="contact.html#faq">FAQs &amp; Policies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Stay Inspired</h4>
+          <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 16px;">
+            Get seasonal travel notes, secret routes, and quiet-season offers.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 WanderNest Travels LLP. All rights reserved.</span>
+        <span>Calangute Beach Road, North Goa · +91 98765 43210 · hello@wandernest.in</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Home search button trigger: opens destination quick view modal
+    document.getElementById('homeSearchBtn')?.addEventListener('click', () => {
+      const dest = document.getElementById('homeDestSelect').value;
+      window.WanderNest?.openDestinationModal(dest);
+    });
+
+    // --- Interactive Trip Builder Engine ---
+    const vibeSelect = document.getElementById('tbVibe');
+    const durSelect = document.getElementById('tbDuration');
+    const tierSelect = document.getElementById('tbTier');
+    const guestsSelect = document.getElementById('tbGuests');
+    const calcBtn = document.getElementById('tbCalculateBtn');
+
+    const titleEl = document.getElementById('tbTitle');
+    const descEl = document.getElementById('tbDesc');
+    const priceEl = document.getElementById('tbPriceDisplay');
+    const bookBtn = document.getElementById('tbBookNowBtn');
+
+    const VIBE_CONFIGS = {
+      romance: {
+        title: 'Goa & Kerala Private Honeymoon Sanctuary',
+        desc: 'Private pool villas, sunset catamaran yacht cruise, beachfront candlelit 4-course dinners, and full couples spa rejuvenation.',
+        base: 65000
+      },
+      mountains: {
+        title: 'Himalayan High Passes & Alpine Lake Haven',
+        desc: 'Kashmir Dal Lake royal cedar houseboat or Pangong Tso heated glamping, Gulmarg gondola priority passes, and private 4x4 mountain SUV.',
+        base: 54000
+      },
+      heritage: {
+        title: 'Royal Rajasthan Haveli & Fortresses Circuit',
+        desc: 'Amber Fort private elephant trail, sunset boat cruise on Lake Pichola in Udaipur, and dinners inside 300-year-old royal courtyards.',
+        base: 58000
+      },
+      nature: {
+        title: 'Emerald Backwaters & Misty Plantation Retreat',
+        desc: 'Overnight private Kettuvallam houseboat cruise in Alleppey, Munnar colonial tea bungalow stays, and Thekkady spice safari walks.',
+        base: 48000
+      },
+      coastal: {
+        title: 'Andaman & Goa Tropical Coast & Coral Charter',
+        desc: 'White sand beaches, private PADI certified scuba diving sessions, sunset cocktails, and dedicated luxury airport transfers.',
+        base: 52000
+      }
+    };
+
+    function recalculateTrip() {
+      if (!vibeSelect || !durSelect) return;
+      const vibe = vibeSelect.value;
+      const conf = VIBE_CONFIGS[vibe] || VIBE_CONFIGS.romance;
+      const durMult = parseFloat(durSelect.options[durSelect.selectedIndex].getAttribute('data-mult')) || 1.35;
+      const tierMult = parseFloat(tierSelect.options[tierSelect.selectedIndex].getAttribute('data-tier-mult')) || 1.4;
+
+      let guestFactor = 1.0;
+      if (guestsSelect.value === 'family') guestFactor = 1.6;
+      if (guestsSelect.value === 'solo') guestFactor = 0.65;
+      if (guestsSelect.value === 'group') guestFactor = 2.2;
+
+      const totalInr = Math.round(conf.base * durMult * tierMult * guestFactor);
+
+      titleEl.textContent = conf.title;
+      descEl.textContent = `${durSelect.options[durSelect.selectedIndex].text.split(' (')[0]} — ${conf.desc}`;
+      priceEl.textContent = window.WanderNest ? window.WanderNest.formatPrice(totalInr) : '₹' + totalInr.toLocaleString();
+
+      bookBtn.onclick = () => {
+        window.WanderNest?.openBookingModal('custom-trip', conf.title);
+      };
+    }
+
+    [vibeSelect, durSelect, tierSelect, guestsSelect].forEach(el => {
+      el?.addEventListener('change', recalculateTrip);
+    });
+    calcBtn?.addEventListener('click', recalculateTrip);
+    recalculateTrip();
+
+    // --- Reviews Filter & Custom Submissions ---
+    const filterPills = document.querySelectorAll('#reviewFilterPills .filter-pill');
+    const reviewCards = document.querySelectorAll('#reviewsContainer .review-card');
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filter = pill.getAttribute('data-filter');
+
+        document.querySelectorAll('#reviewsContainer .review-card').forEach(card => {
+          const cat = card.getAttribute('data-category');
+          const lang = card.getAttribute('data-lang');
+          if (filter === 'all' || cat === filter || lang === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    const reviewModal = document.getElementById('reviewModal');
+    const writeBtn = document.getElementById('writeReviewBtn');
+    const closeRevBtn = document.getElementById('closeReviewModal');
+    const cancelRevBtn = document.getElementById('cancelReview');
+    const reviewForm = document.getElementById('submitReviewForm');
+    const reviewsContainer = document.getElementById('reviewsContainer');
+
+    writeBtn?.addEventListener('click', () => reviewModal.classList.add('active'));
+    [closeRevBtn, cancelRevBtn].forEach(b => b?.addEventListener('click', () => reviewModal.classList.remove('active')));
+    reviewModal?.addEventListener('click', (e) => {
+      if (e.target === reviewModal) reviewModal.classList.remove('active');
+    });
+
+    function renderReviewCard(r, prepend = true) {
+      const card = document.createElement('div');
+      card.className = 'review-card';
+      card.setAttribute('data-category', r.type || 'family');
+      card.setAttribute('data-lang', r.lang || 'english');
+      const langBadge = r.lang === 'marathi' ? '<span class="review-lang-badge marathi">मराठी</span>' :
+                        r.lang === 'hinglish' ? '<span class="review-lang-badge hinglish">Hinglish</span>' :
+                        '<span class="review-lang-badge english">English</span>';
+      card.innerHTML = `
+        <div class="review-header">
+          <span class="review-stars">${'★'.repeat(parseInt(r.rating || 5))}</span>
+          <div style="display: flex; gap: 6px; align-items: center;">
+            ${langBadge}
+            <span class="review-trip-badge">${(r.type || 'Travel').toUpperCase()} · ${r.dest || 'India'}</span>
+          </div>
+        </div>
+        <p class="review-quote">"${r.quote}"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background: var(--ocean);">
+            ${r.photo ? `<img src="${r.photo}" alt="${r.name}">` : `<div style="font-weight:600;font-size:18px;color:#fff;">${r.name.charAt(0).toUpperCase()}</div>`}
+          </div>
+          <div>
+            <div class="review-name">${r.name}</div>
+            <div class="review-loc">${r.city} · Verified Traveller (Just now)</div>
+          </div>
+        </div>
+      `;
+      if (prepend) {
+        reviewsContainer?.prepend(card);
+      } else {
+        reviewsContainer?.appendChild(card);
+      }
+    }
+
+    try {
+      const stored = JSON.parse(localStorage.getItem('wandernest_custom_reviews')) || [];
+      stored.forEach(r => renderReviewCard(r, false));
+    } catch (e) {}
+
+    reviewForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const reviewObj = {
+        name: document.getElementById('revName').value,
+        city: document.getElementById('revCity').value,
+        dest: document.getElementById('revDest').value,
+        type: document.getElementById('revType').value,
+        rating: document.getElementById('revRating').value,
+        quote: document.getElementById('revQuote').value
+      };
+
+      try {
+        const stored = JSON.parse(localStorage.getItem('wandernest_custom_reviews')) || [];
+        stored.unshift(reviewObj);
+        localStorage.setItem('wandernest_custom_reviews', JSON.stringify(stored));
+      } catch (e) {}
+
+      renderReviewCard(reviewObj, true);
+      reviewModal?.classList.remove('active');
+      reviewForm.reset();
+      window.WanderNest?.showToast('Thank you! Your travel review has been published.', 'success');
+    });
+  </script>
+</body>
+</html>
